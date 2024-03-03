@@ -1,3 +1,21 @@
+:root {
+    --black: #000000; /*default text color*/
+    --darkBlue: #008AAA; 
+    --lightBlue: #3BBADB;
+    --orange: #D1884F; /*emphasis and accent color*/
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 100%;
+}
+
 body {
-    font-family: "Inter", sans-serif;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+h2 {
+    color: var(--lightBlue);
+    font-family: 'Inter', sans-serif;
 }
