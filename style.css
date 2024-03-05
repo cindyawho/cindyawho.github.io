@@ -1,3 +1,5 @@
+/*------------------ Global Styles ------------------*/
+
 :root {
     --black: #000000; /*default text color*/
     --darkBlue: #008AAA; 
@@ -6,8 +8,12 @@
 }
 
 html {
-    box-sizing: border-box;
-    font-size: 100%;
+    box-sizing: border-box; /*so that padding doesn't add width or height to the elements*/
+    font-size: 100%; /*takes browser based font styles*/
+}
+
+*, *::before, *::after{
+    box-sizing: inherit;
 }
 
 body {
@@ -15,7 +21,24 @@ body {
     font-family: 'Inter', sans-serif;
 }
 
+.visuallyHidden { /*https://www.accessibility-developer-guide.com/examples/hiding-elements/visually/*/
+    position: absolute;
+    left:     -10000px;
+    top:      auto;
+    width:    1px;
+    height:   1px;
+    overflow: hidden;
+}
+
+/*------------------ Might get rid of ------------------*/
+
 h2 {
     color: var(--lightBlue);
     font-family: 'Inter', sans-serif;
 }
+
+/*------------------ Header ------------------*/
+
+
+
+/*------------------ Main ------------------*/
