@@ -5,6 +5,9 @@
     --darkBlue: #008AAA; 
     --lightBlue: #3BBADB;
     --orange: #D1884F; /*emphasis and accent color*/
+    --fs-67: 4.1875rem; /*Main greeting font size*/
+    --fs-32: 2rem; /*small greeting font size*/
+    --fs-24: 1.5rem; /*body text font size*/
 }
 
 html {
@@ -21,6 +24,7 @@ body {
     font-family: 'Inter', sans-serif;
 }
 
+
 .visuallyHidden { /*https://www.accessibility-developer-guide.com/examples/hiding-elements/visually/*/
     position: absolute;
     left:     -10000px;
@@ -35,10 +39,37 @@ body {
 h2 {
     color: var(--lightBlue);
     font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: var(--fs-32);
+}
+
+h1 {
+    color: var(--darkBlue);
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    font-size: var(--fs-67);
+}
+
+p {
+    color: var(--black);
+    font-family: 'Inter', sans-serif;
+    
+    font-size: var(--fs-24);
+}
+
+.emphasis {
+    color: var(--orange);
 }
 
 /*------------------ Header ------------------*/
 
+.headerHome{
+    font-size: 1rem;
+    font-size: clamp(1rem, 1.02rem + 2.04vw, 2rem);
+    color: var(--white-main-text);
+    text-decoration: none;
+    flex: 1 0 100%;
+}
 
 
 /*------------------ Main ------------------*/
