@@ -8,6 +8,7 @@
     --fs-67: 4.1875rem; /*Main greeting font size*/
     --fs-32: 2rem; /*small greeting font size*/
     --fs-24: 1.5rem; /*body text font size*/
+    --transition: 250ms ease-in-out;
 }
 
 html {
@@ -24,6 +25,13 @@ body {
     font-family: 'Inter', sans-serif;
 }
 
+a{
+    transition: color var(--transition);
+}
+
+a:hover {
+    color: var(--orange);
+}
 
 .visuallyHidden { /*https://www.accessibility-developer-guide.com/examples/hiding-elements/visually/*/
     position: absolute;
@@ -53,7 +61,6 @@ h1 {
 p {
     color: var(--black);
     font-family: 'Inter', sans-serif;
-    
     font-size: var(--fs-24);
 }
 
@@ -63,13 +70,34 @@ p {
 
 /*------------------ Header ------------------*/
 
-.headerHome{
+.headerNav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    gap: 20px 25px; /*row and column gap by flex*/
+}
+
+.headerHome {
     font-size: 1rem;
-    font-size: clamp(1rem, 1.02rem + 2.04vw, 2rem);
+    font-weight: bold;
+    font-size: clamp(.75rem, .75rem + 2.04vw, 1.75rem);
     color: var(--white-main-text);
     text-decoration: none;
     flex: 1 0 100%;
 }
 
+@media (min-width:37.5em){
+    .headerNav{
+        justify-content: flex-start;
+        align-items: center;
+        text-align: right;
+        gap: 30px;
+    }
 
+    .headerHome{
+        flex: 1;
+        margin-inline-end: auto;
+    }
+}
 /*------------------ Main ------------------*/
