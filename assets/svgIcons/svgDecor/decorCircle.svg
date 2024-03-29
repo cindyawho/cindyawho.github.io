@@ -1,0 +1,17 @@
+<svg 
+  width="6px" 
+  height="6px" 
+  viewBox="0 0 40 40" 
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" 
+  role="img" 
+  class="iconify iconify--twemoji" 
+  preserveAspectRatio="xMidYMid meet">
+
+    <circle 
+      fill="none" 
+      stroke="#FFB400"
+      stroke-width= "1"
+      cx="15" cy="15" 
+      r="14">
+    </circle>
+</svg>

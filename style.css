@@ -1,103 +1,523 @@
-/*------------------ Global Styles ------------------*/
-
 :root {
-    --black: #000000; /*default text color*/
-    --darkBlue: #008AAA; 
-    --lightBlue: #3BBADB;
-    --orange: #D1884F; /*emphasis and accent color*/
-    --fs-67: 4.1875rem; /*Main greeting font size*/
-    --fs-32: 2rem; /*small greeting font size*/
-    --fs-24: 1.5rem; /*body text font size*/
-    --transition: 250ms ease-in-out;
-}
-
-html {
-    box-sizing: border-box; /*so that padding doesn't add width or height to the elements*/
-    font-size: 100%; /*takes browser based font styles*/
-}
-
-*, *::before, *::after{
-    box-sizing: inherit;
-}
-
-body {
-    margin: 0;
-    font-family: 'Inter', sans-serif;
-}
-
-a{
+    /* Colors */
+    --white: #FFFFFF;
+    --darkGold_Button: #FFB400;
+    --black_MainText: #2B2B2B;
+    --gray_SubText: #767676;
+    --gray_Background: #F0F0F6;
+    /* Mobile Font Sizes */
+    --fs-32: 2rem;
+    --fs-24: 1.5rem;
+    --fs-22: 1.375rem;
+    --fs-20: 1.25rem;
+    --fs-18: 1.125rem;
+    --fs-16: 1rem;
+    --fs-14: 0.875rem;
+    --fs-12: 0.75rem;
+    /* Font */
+    --font: "Inter", sans-serif;
+    /* Transition */
+    --transition: 550ms ease-in-out;
+  }
+  
+  html {
+    height: 100%;
+    width: 100%;
+  }
+  
+  body, textarea, input {
+    background-color: var(--gray_Background);
+    font-family: var(--font);
+    color: var(--black_MainText);
+  }
+  
+  a svg circle{
     transition: color var(--transition);
-}
-
-a:hover {
-    color: var(--orange);
-}
-
-.visuallyHidden { /*https://www.accessibility-developer-guide.com/examples/hiding-elements/visually/*/
+  }
+  
+  a:hover svg circle{
+    fill: var(--darkGold_Button);
+  }
+  
+  a.underline{
+    color: var(--darkGold_Button);
+    /* text-decoration: none; */
+  }
+  
+  button {
+    background-color: var(--darkGold_Button); 
+    border: none;
+    color: var(--black_MainText);
+    padding: 10px 20px;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+  }
+  
+  .bottomBorder{
+    border-bottom: 1px solid var(--gray_Background);
+  }
+  
+  .visuallyHidden {
     position: absolute;
-    left:     -10000px;
-    top:      auto;
-    width:    1px;
-    height:   1px;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
     overflow: hidden;
-}
-
-/*------------------ Might get rid of ------------------*/
-
-h2 {
-    color: var(--lightBlue);
-    font-family: 'Inter', sans-serif;
+  }
+  
+  /*****************************************************
+  --------------------- Nav Bar -------------------------
+  *****************************************************/
+  
+  .navBarWrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--white);
+    width: 100%;
+    height: 70px;
+    z-index: 10;
+  }
+  
+  .navBarGridIcons{
+    justify-content: space-around;
+    margin: 10px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+  }
+  
+  /************MEDIA QUERY**************/
+  @media (min-width: 600px) {
+    .navBarWrapper {
+      right: 0;
+      left: auto;
+      /* width: 10vw; */
+      width: 70px;
+      height: 100%;
+      margin: auto;
+      justify-content: space-around;
+    }
+    .navBarGridIcons{
+      grid-template-columns: none;
+      grid-template-rows: repeat(6, 1fr);
+      row-gap: calc(100%/6);
+    }
+  }
+  
+  
+  /*****************************************************
+  --------------------- Hero Section ---------------------
+  *****************************************************/
+  .centralContent{
+    margin: 0;
+    width: 100%;
+  }
+  .centralDecor{
+    margin: 42px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .heroWrapper {
+    position: relative;
+    margin-top: 75px;
+    margin-inline: -7px;
+    padding-block: 0;
+    background-color: var(--white);
+    font-family: "Inter", sans-serif;
+    height: auto;
+    padding: 5px;
+    width: 100%;
+  }
+  
+  .heroDecoration {
+    position: absolute;
+  }
+  
+  .heroDecoration_Icon{
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* for individual circle
+    margin-left: 16px;
+    margin-top: 12px; */
+    z-index: 1;
+  }
+  
+  .heroContent {
+    padding: 24px;
+    /* line-height: 123.6%; */
+    position: relative;
+    z-index: 3;
+    width: 100%;
+  }
+  
+  .heroContent h1{
+    /* font-size: var(--fs-24); */
+    font-size: 1.375rem;
+    font-size: clamp(1.375rem, 1.1607142857142856rem + 1.0714285714285714vw, 1.5625rem);
+    font-weight: 700;
+    max-width: 65vw;
+  }
+  
+  .heroContent_Span {
+    color: var(--darkGold_Button);
+  }
+  
+  .heroContent p{
     font-weight: 300;
-    font-size: var(--fs-32);
-}
-
-h1 {
-    color: var(--darkBlue);
-    font-family: 'Inter', sans-serif;
-    font-weight: bold;
-    font-size: var(--fs-67);
-}
-
-p {
-    color: var(--black);
-    font-family: 'Inter', sans-serif;
-    font-size: var(--fs-24);
-}
-
-.emphasis {
-    color: var(--orange);
-}
-
-/*------------------ Header ------------------*/
-
-.headerNav {
-    display: flex;
-    flex-wrap: wrap;
+    /* font-size: var(--fs-14); */
+    font-size: 0.875rem;
+    font-size: clamp(0.875rem, 0.7321428571428572rem + 0.7142857142857143vw, 1rem);
+    color: var(--gray_SubText);
+    text-transform: capitalize;
+    max-width: 55vw;
+  }
+  
+  .heroImage {
+    position: absolute;
+    width: clamp(8.9375rem, 2.008928571428571rem + 34.64285714285714vw, 15rem);
+    height: auto;
+    bottom: 0;
+    right: 0;
+    z-index: 3;
+  }
+  
+  .heroButton{
+    padding: 0;
+    margin-inline-start: 24px;
+    margin-bottom: 16px;
+  }
+  
+  .heroButton button{
+    width: 154px;
+    height: 50px;
+  }
+  
+  /************ HERO MEDIA QUERY **************/
+  @media (min-width: 600px){
+    .centralContent{
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 230px;
+      width: auto;
+      margin-right: 110px;
+    }
+    
+    .heroWrapper {
+      height: 470px;
+      margin: 0;
+    }
+  
+    .heroContent {
+      top: 0;
+      bottom: 0;
+      translate: 0% -20px;
+      position: relative;
+    }
+  
+    .heroContent h1{
+      font-size: 2.5rem;
+      font-size: clamp(2.5rem, 1.75rem + 2vw, 4rem);
+      width: 60%;
+    }
+  
+    .heroContent p{
+      font-size: 0.875rem;
+      font-size: clamp(0.875rem, 0.5rem + 1vw, 1.125rem);
+      max-width: 50%;
+    }
+    
+    .heroDecoration_Icon{
+      width: 50vw;
+      height: auto;
+    }
+    
+    .heroDecoration_Icon svg{
+      width: 50vw;
+      height: auto;
+      opacity: 80%;
+    }
+  
+    .heroImage {
+      width: clamp(16.875rem, 11.71875rem + 13.750000000000002vw, 20.3125rem);;
+      height: auto;
+    }
+    
+    .heroButton button{
+      position: absolute;
+      z-index: 3;
+      bottom: 0;
+      margin-bottom: 20px;
+    }
+  }
+  
+  /*****************************************************
+  --------------------- Work History ---------------------
+  *****************************************************/
+  
+  .workWrapper{
+    width: 100%;
+  }
+  
+  .sectionTitle{
+    text-align: center;
+  }
+  
+  .sectionDescription{
+    text-align: center;
+    color: var(--gray_SubText);
+    line-height: 1.5rem;
+  }
+  
+  .workContent{
+    background-color: var(--white);
+    width: 100%;
+    padding: 10px;
+  }
+  
+  .workJobHeadline{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    font-size: var(--fs-16);
+  }
+  
+  .workJobDates{
+    text-align: right;
+    margin-inline-end: 10px;
+  }
+  
+  .workJobDates p{
+    background-color: var(--darkGold_Button);
+    display: inline-block;
+    right: 0;
+    left: auto;
+    padding: 5px;
+    color: var(--white);
+    text-align: right;
+    font-size: var(--fs-12);
+  }
+  
+  .workJobDescription{
+    color: var(--gray_SubText);
+    line-height: 1.5rem;
+  }
+  
+  
+  @media(min-width: 37.5em){
+    .workContent{
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      padding: 35px;
+      width: auto;
+    }
+    .sectionTitle{
+      font-size: clamp(1.625rem, 1.4485294117647058rem + 0.8823529411764706vw, 2rem);
+    }
+    .sectionDescription{
+      font-size: var(--fs-18);
+      margin-left: auto;
+      margin-right: auto;
+      width: 70%;
+    }
+    .workJobHeadline{
+      display: block;
+      text-align: right;
+      grid-column: 1 / span 1;
+      font-size: var(--fs-20);
+    }
+    .workJobDescription{
+      grid-column: 3 / span 4;
+      font-size: var(--fs-18);
+    }
+  }
+  
+  /*****************************************************
+  --------------------- Education ---------------------
+  *****************************************************/
+  
+  .educationWrapper h3{
+    color: #2B2B2B;
+  }
+  
+  /*****************************************************
+  --------------------- Portfolio ----------------------
+  *****************************************************/
+  
+  /* Need to create a portfolio bar or dropdown for mobile */
+  /* Will eventually be a working selector using javascript */
+  .portfolioBar{
+    display: none;
+    /* display: flex; */
+    flex-direction: row;
+    justify-content: center;
+    gap: 35px;
+  }
+  
+  .portfolioProjects{
+    display: grid;
+    row-gap: 20px;
+  }
+  
+  .projectItem{
+    display: grid;
     justify-content: center;
     text-align: center;
-    gap: 20px 25px; /*row and column gap by flex*/
-}
-
-.headerHome {
-    font-size: 1rem;
-    font-weight: bold;
-    font-size: clamp(.75rem, .75rem + 2.04vw, 1.75rem);
-    color: var(--white-main-text);
-    text-decoration: none;
-    flex: 1 0 100%;
-}
-
-@media (min-width:37.5em){
-    .headerNav{
-        justify-content: flex-start;
-        align-items: center;
-        text-align: right;
-        gap: 30px;
+    border-bottom: 3px dotted var(--white);
+  }
+  
+  .projectImage{
+    width: 77vw;
+    height: auto;
+  }
+  
+  .projectTitle{
+    margin-bottom: 10px;
+  }
+  
+  .projectSkills{
+    background-color: var(--darkGold_Button);
+    display: block;
+    width: fit-content;
+    padding: 5px;
+    color: var(--white);
+    margin: auto;
+    text-align: center;
+    font-size: var(--fs-14);
+  }
+  
+  .projectLinks{
+    padding: 10px;
+    /* display: flex;
+    justify-content: space-between; */
+  }
+  
+  .projectLinks a{
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  
+  @media(min-width: 37.5em){
+    .portfolioProjects{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
     }
-
-    .headerHome{
-        flex: 1;
-        margin-inline-end: auto;
+    .projectItem{
+      border-bottom: none;
     }
-}
-/*------------------ Main ------------------*/
+    .projectImage{
+      width: 100%;
+      height: auto;
+    }
+    .projectLinks a{
+      margin-left: 5px;
+      margin-right: 5px;
+    }
+  }
+  
+  /*****************************************************
+  --------------------- Contact Form --------------------
+  *****************************************************/
+  .contactWrapper{
+  
+  }
+  
+  .contactText{
+  
+  }
+  
+  .contactFormWrapper{
+    background-color: var(--white);
+    padding: 25px;
+  }
+  
+  .contactControl{
+    padding-bottom: 25px;
+    margin-right: 25px;
+  }
+  
+  .contactControl label{
+    font-size: var(--fs-16);
+    color: var(--gray_SubText);
+  }
+  
+  .contactControl input, 
+  .contactControl textarea{
+    width: 100%;
+    border: none;
+    font-size: var(--fs-16);
+    padding: 10px;
+  }
+  
+  .contactControl textarea{
+    resize: vertical;
+  }
+  
+  .contactControl button{
+    font-size: var(--fs-14);
+    font-weight: 600;
+  }
+  
+  @media(min-width: 37.5em){
+    .contactFormWrapper{
+      margin: auto;
+      max-width: 37.5em;
+    }
+  }
+  
+  /*****************************************************
+  --------------------- Info Bar -------------------------
+  *****************************************************/
+  
+  .infoBarWrapper {
+    position: relative;
+    background-color: var(--white);
+    width: auto;
+    height: 300px;
+    top:0;
+    margin-top: 35px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+  
+  /************ Info Bar Media Query **************/
+  @media (min-width: 600px) {
+    .infoBarWrapper {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 200px;
+      height: 100%;
+      display: inline-grid;
+      grid-template-columns: none;
+      grid-template-rows: repeat(5, 1fr);
+      justify-items: center;
+      align-items: center;
+    }
+    .inforBarHeader h3, .inforBarHeader h4{
+      text-align: center;
+      /* display: grid;
+      justify-items: center;
+      align-items: center;
+      margin: 0 auto; */
+    }
+    .infoBarProfile{
+      /* width: 100px; */
+    }
+  
+  }
+  
+  
+  /*****************************************************
+  --------------------- OTHER -------------------------
+  *****************************************************/
+  

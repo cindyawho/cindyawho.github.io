@@ -1,57 +1,495 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Portfolio Home</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Cindy's Resume</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="icon" type="image/png" sizes="10.562x18.75" href="./assets/favicon.png">
 
-    <link rel="stylesheet" href="style.css"> <!--Linking style sheet-->
-    
-    <!--The next three tabs are for the font Inter-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-
-    <!--Adding Icon for tab-->
-    <link
-        rel="icon"
-        type="image/png"
-        sizes="10.562x18.75"
-        href="./assets/images/favicon.png"
-    />
-
+  <!-- GOOGLE FONTS: INTER -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <header class="header">
-        <div class="wrapper">
-            <nav class="headerNav">
-                <a href="./index.html" class="headerHome">
-                    Home
-                    <span class="visuallyHidden">(to home page)</span>
-                </a>
-
-                <a href="./aboutMe.html" class="headerHome">
-                    About Me
-                    <span class="visuallyHidden">(to about me page)</span>
-                </a>
-
-                <a href="./contactMe.html" class="headerHome">
-                    Contact Me
-                    <span class="visuallyHidden">(to contact me page)</span>
-                </a>
-            </nav>
+  <section>
+    <div class="navBarWrapper">
+      <h2 class="visuallyHidden">Navigation Bar</h2>
+      <div class="navBarGridIcons">
+        <div class="navBarIcon"> <!-- <p>CONTRAST</p> -->
+          <a href="">
+            <svg width="40px" height="40px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <g>
+                    <path fill="none" d="M0 0h24v24H0z"/>
+                    <path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-6.671-5.575A8 8 0 1 0 16.425 5.328a8.997 8.997 0 0 1-2.304 8.793 8.997 8.997 0 0 1-8.792 2.304z"/>
+                </g>
+            </svg>
+          </a>
         </div>
-    </header>
+        <div class="navBarIcon"> <!-- <p>Home</p> -->
+          <a href="index.html">
+            <svg 
+              width="40px" 
+              height="40px" 
+              viewBox="0 0 36 36" 
+              xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" 
+              role="img" 
+              class="iconify iconify--twemoji" 
+              preserveAspectRatio="xMidYMid meet">
 
-    <h2>Welcome to my Portfolio Website!</h2>
-    
-    <h1>Hi, I'm Cindy, a math <span class="emphasis">teacher</span> learning to <span class="emphasis">code</span>.</h1>
-    
-    <p>I am a diligent and dedicated lifelong learner currently developing my coding skills. <a>See More...</a></a></p>
+              <circle 
+                fill="#F0F0F6" 
+                cx="18" cy="18" 
+                r="18">
+              </circle>
+
+              <g
+                transform="translate(6.5 5)">
+                <path 
+                  d="M2.168,10.555a1,1,0,0,1,.278-1.387l9-6a1,1,0,0,1,1.11,0l9,6A1,1,0,0,1,21,11H19v9a1,1,0,0,1-1,1H6a1,1,0,0,1-1-1V11H3l.019-.019A.981.981,0,0,1,2.168,10.555Z"/>
+              </g>
+
+            </svg>
+          </a>
+        </div>
+        <div class="navBarIcon" > <!-- <p>Graduate Cap</p> -->
+          <a href="#education">
+            <svg 
+              width="40px" 
+              height="40px" 
+              viewBox="0 0 36 36" 
+              xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" 
+              role="img" 
+              class="iconify iconify--twemoji" 
+              preserveAspectRatio="xMidYMid meet">
+
+              <circle 
+                fill="#F0F0F6" 
+                cx="18" cy="18" 
+                r="18">
+              </circle>
+
+              <g
+                transform="translate(5.5 5)
+                          scale(0.8)">
+                <g>
+                  <g>
+                    <path d="M31.771,20.319c0-0.474-0.279-0.87-0.676-1.066V11.9c0.09-0.034,0.146-0.119,0.145-0.214c0-0.095-0.062-0.179-0.149-0.21
+                      L15.92,6.125c-0.194-0.069-0.406-0.069-0.601,0L0.15,11.477c-0.089,0.031-0.149,0.115-0.15,0.21s0.056,0.18,0.144,0.214
+                      l15.148,5.896c0.211,0.081,0.444,0.081,0.655,0l14.102-5.492v6.947c-0.396,0.195-0.675,0.594-0.675,1.065
+                      c0,0.492,0.3,0.919,0.729,1.102c-0.429,0.847-0.729,2.585-0.729,3.081c0,0.661,0.537,1.197,1.198,1.197
+                      c0.66,0,1.197-0.536,1.197-1.197c0-0.496-0.301-2.234-0.729-3.081C31.47,21.238,31.771,20.811,31.771,20.319z"/>
+                    <path d="M4.888,14.87c0.001,1.696,0.002,3.692,0.002,4.009c0,3.158,4.753,5.729,10.73,5.89c5.976-0.161,10.729-2.729,10.729-5.89
+                      c0-0.315,0-2.312,0.002-4.009l-10.406,4.051c-0.211,0.082-0.444,0.082-0.655,0L4.888,14.87z"/>
+                  </g>
+                </g>
+              </g>
+
+            </svg>
+          </a>
+        </div>
+        <div class="navBarIcon" > <!-- <p>Portfolio</p> -->
+          <a href="#portfolio">
+          <svg 
+            width="40px" 
+            height="40px" 
+            viewBox="0 0 36 36" 
+            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" 
+            role="img" 
+            class="iconify iconify--twemoji" 
+            preserveAspectRatio="xMidYMid meet">
+
+            <circle 
+              fill="#F0F0F6" 
+              cx="18" cy="18" 
+              r="18">
+            </circle>
+
+            <g
+              transform="translate(4 2.5) scale(0.9)">
+              <path d="M26,9h-2.6c-1.2-3-4.1-5-7.4-5c-3.3,0-6.2,2-7.4,5H6c-1.7,0-3,1.3-3,3v0.6C3,16.1,5.9,19,9.4,19h13.3
+                c3.5,0,6.4-2.9,6.4-6.4V12C29,10.3,27.7,9,26,9z M16,6c2.2,0,4.1,1.2,5.2,3H10.8C11.9,7.2,13.8,6,16,6z"/>
+              <path d="M23,21C23,21,23,21,23,21l0,2c0,0.6-0.4,1-1,1s-1-0.4-1-1v-2H11v2c0,0.6-0.4,1-1,1s-1-0.4-1-1v-2c0,0,0,0,0,0
+                c-2.4-0.1-4.5-1.2-6-2.9V25c0,1.7,1.3,3,3,3h20c1.7,0,3-1.3,3-3v-6.9C27.5,19.8,25.4,20.9,23,21z"/>
+            </g>
+
+          </svg>
+          </a>
+        </div>
+        <div class="navBarIcon"> <!-- <p>Contact</p> -->
+          <a href="#contact">
+          <svg 
+            width="40px" 
+            height="40px" 
+            viewBox="0 0 36 36" 
+            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" 
+            role="img" 
+            class="iconify iconify--twemoji" 
+            preserveAspectRatio="xMidYMid meet">
+
+            <circle 
+              fill="#F0F0F6" 
+              cx="18" cy="18" 
+              r="18">
+            </circle>
+
+            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g id="icon" fill="#000000" transform="translate(7.5, 9) scale(.05)">
+                    <path d="M426.666667,1.42108547e-14 L426.666667,341.333333 L3.55271368e-14,341.333333 L3.55271368e-14,1.42108547e-14 L426.666667,1.42108547e-14 Z M362.666667,213.333333 L234.666667,213.333333 L234.666667,245.333333 L362.666667,245.333333 L362.666667,213.333333 Z M125.333333,155.733333 L109.333333,155.733333 C78.4053873,155.733333 53.3333333,181.333333 53.3333333,213.333333 L53.3333333,213.333333 L181.333333,213.333333 C181.333333,181.333333 156.16,155.733333 125.333333,155.733333 L125.333333,155.733333 Z M362.666667,149.333333 L234.666667,149.333333 L234.666667,181.333333 L362.666667,181.333333 L362.666667,149.333333 Z M117.333333,78.62624 C101.86936,78.62624 89.3333333,91.162267 89.3333333,106.62624 C89.3333333,122.090213 101.86936,134.62624 117.333333,134.62624 C132.797306,134.62624 145.333333,122.090213 145.333333,106.62624 C145.333333,91.162267 132.797306,78.62624 117.333333,78.62624 Z M362.666667,85.3333333 L234.666667,85.3333333 L234.666667,117.333333 L362.666667,117.333333 L362.666667,85.3333333 Z" id="Combined-Shape">
+                    </path>
+                </g>
+            </g>
+
+          </svg>
+          </a>
+        </div>
+        <div class="navBarIcon"> <!-- <p>Message</p> -->
+          <a href="#contact">
+          <svg 
+            width="40px" 
+            height="40px" 
+            viewBox="0 0 36 36" 
+            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" 
+            role="img" 
+            class="iconify iconify--twemoji" 
+            preserveAspectRatio="xMidYMid meet">
+
+            <circle 
+              fill="#F0F0F6" 
+              cx="18" cy="18" 
+              r="18">
+            </circle>
+
+            <g
+              transform="translate(7 6.5) scale(.012)">
+              <path d="M1920 428.266v1189.54l-464.16-580.146-88.203 70.585 468.679 585.904H83.684l468.679-585.904-88.202-70.585L0 1617.805V428.265l959.944 832.441L1920 428.266ZM1919.932 226v52.627l-959.943 832.44L.045 278.628V226h1919.887Z" fill-rule="evenodd"/>
+            </g>
+
+          </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="centralContent">
+      <div class="heroWrapper">
+        <img class = "heroImage" src="./assets/profilePictures/profilePicture_transparent.png" alt="Profile Picture of Cindy Andrade"/>
+        <div class="heroDecoration">
+          <div class="heroDecoration_Icon">
+            <svg 
+              width="390px" 
+              height="256px" 
+              viewBox="50 50 300 300" 
+              xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" 
+              role="img" 
+              class="iconify iconify--twemoji" 
+              preserveAspectRatio="xMidYMid meet">
+  
+              <circle 
+                fill="none" 
+                stroke="#FFB400"
+                stroke-width= "2"
+                cx="16" cy="83" 
+                r="3">
+              </circle>
+  
+              <circle 
+                fill="none" 
+                stroke="#FFB400"
+                stroke-width= "2"
+                cx="224" cy="224" 
+                r="3">
+              </circle>
+  
+              <circle 
+                fill="none" 
+                stroke="#05FF00"
+                stroke-width= "2"
+                cx="35" cy="240" 
+                r="3">
+              </circle>
+  
+              <circle 
+                fill="none" 
+                stroke="#05FF00"
+                stroke-width= "2"
+                cx="209" cy="92" 
+                r="3">
+              </circle>
+  
+              <rect width="7" height="7" x="360" y="100" fill="none" stroke="#FFB400" stroke-width="2" />
+              <rect width="7" height="7" x="150" y="205" fill="none" stroke="#0047FF" stroke-width="2" />
+  
+            </svg>
+          </div>
+        </div>
+        <div class="heroContent">
+          <h1>
+            Hi! I'm Cindy Andrade, a Teacher who <span class="heroContent_Span">Codes</span>
+          </h1>
+          <p>I'm currently a math high school teacher who is passionate about being a life-long learner</p>
+        </div>
+        <div class="heroButton">
+            <a href="#contact">
+                <button id="heroButton" type="button">
+                Contact Me →
+                </button>
+            </a>
+        </div>
+      </div>
+      <section>
+        <div class="infoBarWrapper">   
+          <div class="infoBarHeader">
+            <img src="./assets/profilePictures/circleProfile.png" alt="" class="infoBarProfile">
+            <h3>Cindy Andrade</h3>
+            <h4>Math Teacher Who Codes</h4>
+          </div>
+          <div class="infoBarGeneral">
+            <h4>This Section is in Progress. Please scroll down to see other parts of the site. Thank you!</h4>
+          </div>
+        </div>  
+      </section>
+      <div class="workWrapper" id="work">
+        <h2 class="sectionTitle">Work History</h2>
+        <p class="sectionDescription">The last 4 years, I have been teaching middle school and high school math. I have taught 6th grade to AP Calculus! I also have experience with customer service, planning events, and project management.</p>
+        <div class="workContent bottomBorder">
+          <div class="workJobHeadline">
+            <div class="workJobTitle">
+              <h3>Mathematics Teacher</h3>
+            </div>
+            <div class="workJobDates">
+              <p>Employer: LAUSD</p>
+              <p>Jan 2016 - Present</p>
+            </div>
+          </div>
+          <div class="workJobDescription">
+            <p>I am currently teaching Math 6, Algebra I, and Geometry at Benjamin Franklin High School. My previous three years I taught Geometry, Geometry Tutorial, Precalculus, Honors Advanced Math (Alg II + Precalculus), and AP Calculus AB at USC Media Arts and Engineering Magnet.</p>
+            <p>As a teacher I...</p>
+            <ul class="workJobList">
+              <li>Encourage partner discussions and check-ins while maintaining and encouraging a positive learning environment.
+              </li>
+              <li>Utilize various online learning platforms to enhance the learning of my students. Platforms include IXL, iReady, and Class Dojo. 
+              </li>
+              <li> Participated in the IB Authorization Team to provide support, discuss ideas, mentor teachers, plan IB-focused unit plans, and mentor 10th grade students with their IB personal projects. </li>
+              <li>Was a member of the WASC Writing Committee, where I updated sections of the WASC report in preparation for the Accreditation visit, gathered information from other school stakeholders, and revised the final report. </li>
+              <li>Currently lead the Chess Club and assist with the middle school Robotics club. Supervised the Coding Club and Senior Committee Club in 2021-2023. Clubs meet in my classroom every week after school or during lunch.</li>
+              <li>Prepare and host tutoring before and after school to help students make up missing assignments, study for assessments, and do assessment retakes.</li>
+              <li>Fundraised over $1000 for four different projects through DonorsChoose for calculators, student whiteboards, and art supplies for a Calculus Project.</li>
+              <li>Led math department meetings at my past school.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="workContent bottomBorder">
+          <div class="workJobHeadline">
+            <div class="workJobTitle">
+              <h3>Substitute Teacher</h3>
+            </div>
+            <div class="workJobDates">
+              <p>Employer: LAUSD</p>
+              <p>Jan 2020 - May 2020</p>
+            </div>
+          </div>
+          <div class="workJobDescription">
+            <p>As a substitute teacher I...</p>
+            <ul class="workJobList">
+              <li>Covered classes when teachers were unavailable, which included enacting lesson plans, monitoring the classroom, and assisting students.</li>
+              <li>Was flexible when assigned coverage for single periods in different classes or full days. </li>
+            </ul>
+          </div>
+        </div>
+        <div class="workContent bottomBorder">
+          <div class="workJobHeadline">
+            <div class="workJobTitle">
+              <h3>Student Teacher</h3>
+            </div>
+            <div class="workJobDates">
+              <p>At USC MAE Magnet</p>
+              <p>Jan 2019 - Dec 2019</p>
+            </div>
+          </div>
+          <div class="workJobDescription">
+            <p>As a student teacher I...</p>
+            <ul class="workJobList">
+              <li>Taught a Geometry class with students from 9th to 11th grade in Spring 2019.</li>
+              <li>Taught 6th and 8th-grade math classes in Fall 2019.</li>
+              <li>Planned, taught, and reflected on lessons; managed the classroom; graded assignments, and exams; tutored students after school, and attended department and faculty meetings.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="workContent bottomBorder">
+          <div class="workJobHeadline">
+            <div class="workJobTitle">
+              <h3>Special Project Assistant</h3>
+            </div>
+            <div class="workJobDates">
+              <p>Employer: USC Student Life</p>
+              <p>Sept 2015 - May 2018</p>
+            </div>
+          </div>
+          <div class="workJobDescription">
+            <p>As a project assistant at El Centro Chicano, I worked at the front desk, answered phone calls, created and edited flyers, and helped manage programs and events. I was Editing Manager for El Centro's weekly E-Newsletter.</p>
+            <p>Note: El Centro Chicano is now known as <a href="https://lacasa.usc.edu/">La CASA.</a></p>
+          </div>
+        </div>
+        <div class="workContent bottomBorder">
+          <div class="workJobHeadline">
+            <div class="workJobTitle">
+              <h3>Resident Assistant</h3>
+            </div>
+            <div class="workJobDates">
+              <p>Employer: USC Summer Programs</p>
+              <p>June - July 2018 & 2019</p>
+            </div>
+          </div>
+          <div class="workJobDescription">
+            <p>As a resident assistant for the USC Summer Programs, I led nightly meetings and check-ins for high school students varying in age, assisted in multiple events and activities per week, chaperoned weekend field trips, and enforced program rules.</p>
+          </div>
+        </div>
+        <div class="workContent bottomBorder">
+          <div class="workJobHeadline">
+            <div class="workJobTitle">
+              <h3>Resident Assistant</h3>
+            </div>
+            <div class="workJobDates">
+              <p>Employer: USC Residential Education</p>
+              <p>Aug 2016 - May 2017</p>
+            </div>
+          </div>
+          <div class="workJobDescription">
+            <p>As a resident assistant for the <a href="https://lacasa.usc.edu/programs-and-events/latinx-floor-special-interest-community/">Latino Floor</a>, I was responsible for advising 32 undergraduates on personal and academic issues, developing and hosting programs throughout the year, leading an executive board, and enforcing university policy.</p>
+          </div>
+        </div>
+      </div>
+      <img id="education" class="centralDecor" src="./assets/svgIcons/svgDecor/decorationCircleTrio.svg" />
+      <div class="educationWrapper" >
+        <h2 class="sectionTitle">Education</h2>
+        <p class="sectionDescription">I am extremeley grateful for all the knowledge and skills I have developed in my life. Below are the degrees I will receive or have received from my studies.</p>
+        <div class="workContent bottomBorder">
+          <div class="workJobHeadline">
+            <div class="workJobTitle">
+              <h3>Pasadena City College</h3>
+            </div>
+            <div class="workJobDates">
+              <p>Jun 2023 - Present</p>
+            </div>
+          </div>
+          <div class="workJobDescription">
+            <h3>Associate's Degree</h3>
+            <h3>Computer Information Systems: Full Stack Development</h3>
+            <p>[Description here] Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet dapibus nibh ut faucibus nunc, egestas id amet porttitor. Pulvinar quisque sed amet, nulla nunc. Eleifend sodales posuere fusce tempus etiam et pellentesque. Molestie risus enim neque eget dui.</p>
+          </div>
+        </div>
+        <div class="workContent bottomBorder">
+          <div class="workJobHeadline">
+            <div class="workJobTitle">
+              <h3>University of Southern California</h3>
+            </div>
+            <div class="workJobDates">
+              <p>Jan 2019 - May 2020</p>
+            </div>
+          </div>
+          <div class="workJobDescription">
+            <h3>Master of Arts</h3>
+            <h3>Teaching Secondary: Mathematics</h3>
+            <p>[Description here] Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet dapibus nibh ut faucibus nunc, egestas id amet porttitor. Pulvinar quisque sed amet, nulla nunc. Eleifend sodales posuere fusce tempus etiam et pellentesque. Molestie risus enim neque eget dui.</p>
+          </div>
+        </div>
+        <div class="workContent bottomBorder">
+          <div class="workJobHeadline">
+            <div class="workJobTitle">
+              <h3>University of Southern California</h3>
+            </div>
+            <div class="workJobDates">
+              <p>Aug 2015 - May 2019</p>
+            </div>
+          </div>
+          <div class="workJobDescription">
+            <h3>Bachelor of Arts</h3>
+            <h3>Applied and Computational Mathematics</h3>
+            <p>[Description here] Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet dapibus nibh ut faucibus nunc, egestas id amet porttitor. Pulvinar quisque sed amet, nulla nunc. Eleifend sodales posuere fusce tempus etiam et pellentesque. Molestie risus enim neque eget dui.</p>
+          </div>
+        </div>
+      </div>
+      <img id="portfolio" class="centralDecor" src="./assets/svgIcons/svgDecor/decorationCircleTrio.svg" />
+      <div class="portfolioWrapper" >
+        <h2 class="sectionTitle">Portfolio</h2>
+        <p class="sectionDescription">Note: The project links are in progress. Thank you for understanding!</p>
+        <p class="sectionDescription">Here are some of the projects I've created for my coding classes and for my personal growth!</p>
+        <div class="portfolioBar">
+          <h3>All Categories</h3>
+          <h3>HTML</h3>
+          <h3>CSS</h3>
+          <h3>Javascript</h3>
+          <h3>C++ and Python</h3>
+        </div>
+      </div>
+      <div class="portfolioProjects">
+        <div class="projectItem">
+          <img src="./assets/portfolioProjects/cindyPortfolio.png" alt="screenshot of this portfolio website" class="projectImage"/>
+          <h3 class="projectTitle">Cindy's Portfolio Website</h3>
+          <p class="projectSkills">Skills Used: HTML and CSS</p>
+          <div class="projectLinks">
+            <a href class="underline">View Project</a>
+            <a href class="underline">View Code</a>
+          </div>
+        </div>
+        <div class="projectItem">
+          <img src="./assets/portfolioProjects/portfolioSinglePage-followAlong.png" alt="screenshot of a single-page portfolio website" class="projectImage"/>
+          <h3 class="projectTitle">Single-Page Portfolio Website</h3>
+          <p class="projectSkills">Skills Used: HTML and CSS</p>
+          <div class="projectLinks">
+            <a href class="underline">View Project</a>
+            <a href class="underline">View Code</a>
+          </div>
+        </div>
+        <div class="projectItem">
+          <img src="./assets/portfolioProjects/numberGuessingGameScreenshot.png" alt="screenshot of a number guessing game using the console of a website" class="projectImage"/>
+          <h3 class="projectTitle">Number Guessing Game</h3>
+          <p class="projectSkills">Skills Used: JavaScript</p>
+          <div class="projectLinks">
+            <a href class="underline">View Project</a>
+            <a href class="underline">View Code</a>
+          </div>
+        </div>
+      </div>
+      <img id="contact" class="centralDecor" src="./assets/svgIcons/svgDecor/decorationCircleTrio.svg" />
+      <div class="contactWrapper">
+        <div class="contactText">
+          <h2 class="sectionTitle">Contact Me</h2>
+          <p class="sectionDescription">I would love to hear about your project and how I could help!</p>
+        </div>
+        <div class="contactFormWrapper">
+          <form action="mailto:cindyandcode@gmail.com" method="post" enctype="text/plain" class="contactForm">
+            <div class="contactControl">
+              <label for="name">Your Full Name (Required)</label>
+              <input type="text" id="name" name="name" required/>
+            </div>
+            <div class="contactControl">
+                <label for="email">Your Email (Required)</label>
+                <input type="email" id="email" name="email" required/>
+            </div>
+            <div class="contactControl">
+                <label for="message">Your Message</label>
+                <textarea name="message" id="message" cols="30" rows="7" ></textarea>
+            </div>
+            <div class="contactControl">
+                <button type="Submit">Send Message</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
 
 
-    <footer>Hosted with Github Pages.</footer>
+
+
+  <script src="script.js"></script>
 </body>
+
 </html>

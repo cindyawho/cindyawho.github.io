@@ -1,0 +1,45 @@
+<svg 
+  width="390px" 
+  height="256px" 
+  viewBox="0 0 400 400" 
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" 
+  role="img" 
+  class="iconify iconify--twemoji" 
+  preserveAspectRatio="xMidYMid meet">
+
+  <circle 
+    fill="none" 
+    stroke="#FFB400"
+    stroke-width= "2"
+    cx="16" cy="83" 
+    r="3">
+  </circle>
+
+  <circle 
+    fill="none" 
+    stroke="#FFB400"
+    stroke-width= "2"
+    cx="224" cy="224" 
+    r="3">
+  </circle>
+
+  <circle 
+    fill="none" 
+    stroke="#05FF00"
+    stroke-width= "2"
+    cx="35" cy="240" 
+    r="3">
+  </circle>
+
+  <circle 
+    fill="none" 
+    stroke="#05FF00"
+    stroke-width= "2"
+    cx="209" cy="92" 
+    r="3">
+  </circle>
+
+  <rect width="7" height="7" x="360" y="100" fill="none" stroke="#FFB400" stroke-width="2" />
+  <rect width="7" height="7" x="150" y="205" fill="none" stroke="#0047FF" stroke-width="2" />
+
+</svg>
