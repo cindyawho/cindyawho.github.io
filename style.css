@@ -57,12 +57,6 @@ button {
   border-radius: 5px;
 }
 
-button:hover{
-  background-color: var(--black_MainText);
-  color: var(--darkGold_Button);
-  cursor:pointer;
-}
-
 .bottomBorder{
   border-bottom: 1px solid var(--gray_Background);
 }
@@ -140,7 +134,6 @@ button:hover{
   height: auto;
   padding: 5px;
   width: 100%;
-  z-index: 0;
 }
 
 .heroDecoration {
@@ -154,7 +147,7 @@ button:hover{
   /* for individual circle
   margin-left: 16px;
   margin-top: 12px; */
-  z-index: -1;
+  z-index: 1;
 }
 
 .heroContent {
@@ -200,7 +193,6 @@ button:hover{
   padding: 0;
   margin-inline-start: 24px;
   margin-bottom: 16px;
-  z-index: 10;
 }
 
 .heroButton button{
@@ -489,97 +481,13 @@ button:hover{
   position: relative;
   background-color: var(--white);
   width: auto;
-  height: auto;
+  height: 300px;
   top:0;
   margin-top: 35px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 1fr, 1fr, auto;
+  grid-template-rows: repeat(3, 1fr);
 }
-
-/* Info Bar Header */
-
-.infoBarHeader{
-  grid-row: 1 / 4;
-  text-align: center;
-  padding: 15px;
-}
-
-.infoBarHeader h4{
-  display: none;
-}
-
-.infoBarHeaderSocial{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  justify-content: space-around;
-  justify-items: center;
-  border-bottom: none;
-}
-
-.infoBarHeaderSocialLink{
-  width: fit-content;
-}
-
-.infoBarHeaderSocialImage{
-  height: 24px;
-  width: auto;
-}
-
-/* Info Bar General */
-
-.infoBarGeneral{
-  grid-column: 2 / 4;
-  /* display: inline-block; */
-}
-
-.infoBarGeneralInfo{
-  border-bottom: none;
-}
-
-.infoBarGeneralInfoTitle{
-  display: inline-block;
-  background-color: var(--darkGold_Button);
-  padding: 5px;
-  font-size: 12px;
-  color: var(--white);
-}
-.infoBarGeneralInfoDesc{
-  display: inline-block;
-  font-size: 12px;
-}
-
-/* Info Bar Languages and Skills */
-.infoBarLanguages{
-  /* border-bottom: 1px solid var(--gray_Background); */
-}
-.infoBarSkillsTitle{
-  font-size: 0.875rem;
-  font-weight: 450;
-}
-.infoBarSkills-Desktop{
-  display: none;
-}
-.infoBarSkills-Mobile{
-  display: visible;
-  font-size: .75rem;
-  line-height: 1.5rem;
-  font-weight: 300;
-  color: var(--gray_SubText);
-}
-.infoBarSkills{
-  /* border-bottom: 1px solid var(--gray_Background); */
-}
-
-/* Info Bar Resume Button */
-.infoBarResume{
-  grid-column: 2 / 4;
-}
-.infoBarResumeButton{
-  width: 100%;
-  background-color: var(--darkGold_Button);
-}
-
 
 /************ Info Bar Media Query **************/
 @media (min-width: 600px) {
@@ -589,74 +497,21 @@ button:hover{
     left: 0;
     width: 200px;
     height: 100%;
-    margin-top: 0;
     display: inline-grid;
     grid-template-columns: none;
     grid-template-rows: repeat(5, 1fr);
     justify-items: center;
     align-items: center;
   }
-
-  .infoBarHeader{
-    grid-row: 1 / 2;
-  }
-
-  .infoBarHeader h4{
-    display: visible;
-  }
-  
-  .infoBarHeaderSocial{
-    grid-template-columns: repeat(3, 1fr);
-    padding-bottom: 0px;
-  }
-
-  .infoBarGeneral{
-    grid-column: 1 / 2;
-    padding: 15px;
-    border-bottom: 1px solid var(--gray_Background);
-  }
-
-    /* Info Bar Languages and Skills */
-  .infoBarLanguages{
-    border-bottom: 1px solid var(--gray_Background);
-    grid-column: 1;
-    margin: 0;
-    padding: 15px 20px 15px 20px;
-  }
-  .infoBarSkillsTitle{
-    font-size: var(--fs-18);
-    margin: 0;
-  }
-  .infoBarSkills-Desktop{
-    display: inline-grid;
-  }
-  .infoBarSkills-Desktop p{
-    font-size: var(--fs-16);
-    line-height: 24px;
-    color: var(--gray_SubText);
-    margin-block-end: 5px;
-  }
-  .infoBarSkills-Desktop img{
-    width: 100%;
-  }
-  .infoBarSkills-Mobile{
-    display: none;
-  }
-  .infoBarSkills{
-    border-bottom: 1px solid var(--gray_Background);
-    grid-column: 1;
+  .inforBarHeader h3, .inforBarHeader h4{
+    text-align: center;
+    /* display: grid;
+    justify-items: center;
     align-items: center;
-    /* text-align: center; */
-    padding: 15px 20px 15px 20px;
+    margin: 0 auto; */
   }
-
-  /* Info Bar Resume Button */
-  .infoBarResume{ 
-    grid-column: 1;
-  }
-  .infoBarResumeButton{
-    width: 100%;
-    background-color: var(--darkGold_Button);
+  .infoBarProfile{
+    /* width: 100px; */
   }
 
 }
