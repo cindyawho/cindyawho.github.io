@@ -147,7 +147,7 @@
           </a>
         </div>
         <div class="navBarIcon"> <!-- <p>Message</p> -->
-          <a href="#contact">
+          <a href="">
           <svg 
             width="40px" 
             height="40px" 
@@ -235,22 +235,69 @@
           <p>I'm currently a math high school teacher who is passionate about being a life-long learner</p>
         </div>
         <div class="heroButton">
-            <a href="#contact">
-                <button id="heroButton" type="button">
-                Contact Me →
-                </button>
-            </a>
+            <button id="heroButton" type="button" href="#contact" onClick="hireButton()">
+              Hire Me! →
+            </button>
         </div>
       </div>
       <section>
         <div class="infoBarWrapper">   
-          <div class="infoBarHeader">
+          <div class="infoBarHeader bottomBorder">
             <img src="./assets/profilePictures/circleProfile.png" alt="" class="infoBarProfile">
             <h3>Cindy Andrade</h3>
             <h4>Math Teacher Who Codes</h4>
+            <div class="infoBarHeaderSocial">
+              <a href="https://www.linkedin.com/in/cindy-a-4a4b2588/" class="infoBarHeaderSocialLink">
+                <img src="./assets/svgIcons/socialIcons/linkedin-icon.svg" alt="linkedIn Icon" class="infoBarHeaderSocialImage">
+              </a>
+              <a href="https://github.com/cindyawho" class="infoBarHeaderSocialLink">
+                <img src="./assets/svgIcons/socialIcons/github-Icon.svg" alt="gitHub Icon" class="infoBarHeaderSocialImage">
+              </a>
+              <a href="https://secure.donorschoose.org/profile/teacher-stats.html?teacher=3822677_3824725" class="infoBarHeaderSocialLink">
+                <img src="./assets/svgIcons/socialIcons/donorsChoose-icon.svg" alt="donorsChoose Icon" class="infoBarHeaderSocialImage">
+              </a>
+            </div>
           </div>
           <div class="infoBarGeneral">
-            <h4>This Section is in Progress. Please scroll down to see other parts of the site. Thank you!</h4>
+            <div class="infoBarGeneralInfo">
+              <p class="infoBarGeneralInfoTitle">Age: </p>
+              <p class="infoBarGeneralInfoDesc">26</p>
+            </div>
+            <div class="infoBarGeneralInfo bottomBorder">
+              <p class="infoBarGeneralInfoTitle">Residence: </p>
+              <p class="infoBarGeneralInfoDesc">Los Angeles, CA</p>
+            </div>
+          </div>
+          <div class="infoBarLanguages">
+            <h4 class="infoBarSkillsTitle">Languages</h4>
+            <div class="infoBarSkills-Desktop">
+              <p>English</p>
+              <img src="./assets/svgIcons/line-100.svg" alt="line showing 100% filled"/>
+              <p>Spanish</p>
+              <img src="./assets/svgIcons/line-90.svg" alt="line showing 90% filled"/>
+            </div>
+            <p class="infoBarSkills-Mobile">English and Spanish</p>
+          </div>
+          <div class="infoBarSkills">
+            <h4 class="infoBarSkillsTitle">Skills</h4>
+            <div class="infoBarSkills-Desktop">
+              <p>HTML / CSS</p>
+              <img src="./assets/svgIcons/line-90.svg" alt="line showing 90% filled"/>
+              <p>JavaScript</p>
+              <img src="./assets/svgIcons/line-75.svg" alt="line showing 75% filled"/>
+              <p>C++</p>
+              <img src="./assets/svgIcons/line-80.svg" alt="line showing 80% filled"/>
+              <p>Python</p>
+              <img src="./assets/svgIcons/line-90.svg" alt="line showing 90% filled"/>
+              <p>JS React</p>
+              <img src="./assets/svgIcons/line-30.svg" alt="line showing 30% filled"/>
+              <!-- <p>Design: Figma & Canva</p>
+              <img src="./assets/svgIcons/line-75.svg" alt="line showing 75% filled"/> -->
+            </div>
+            <p class="infoBarSkills-Mobile">HTML/CSS, Python, C++, Javascript, Figma</p>
+          </div>
+          <div class="infoBarResume">
+            <button onClick="openPDF()" href="./assets/CindyAndrade_Resume2024.pdf" target="_blank" class="infoBarResumeButton">See My Resume</button>
           </div>
         </div>  
       </section>
@@ -271,16 +318,16 @@
             <p>I am currently teaching Math 6, Algebra I, and Geometry at Benjamin Franklin High School. My previous three years I taught Geometry, Geometry Tutorial, Precalculus, Honors Advanced Math (Alg II + Precalculus), and AP Calculus AB at USC Media Arts and Engineering Magnet.</p>
             <p>As a teacher I...</p>
             <ul class="workJobList">
-              <li>Encourage partner discussions and check-ins while maintaining and encouraging a positive learning environment.
-              </li>
-              <li>Utilize various online learning platforms to enhance the learning of my students. Platforms include IXL, iReady, and Class Dojo. 
-              </li>
-              <li> Participated in the IB Authorization Team to provide support, discuss ideas, mentor teachers, plan IB-focused unit plans, and mentor 10th grade students with their IB personal projects. </li>
-              <li>Was a member of the WASC Writing Committee, where I updated sections of the WASC report in preparation for the Accreditation visit, gathered information from other school stakeholders, and revised the final report. </li>
-              <li>Currently lead the Chess Club and assist with the middle school Robotics club. Supervised the Coding Club and Senior Committee Club in 2021-2023. Clubs meet in my classroom every week after school or during lunch.</li>
-              <li>Prepare and host tutoring before and after school to help students make up missing assignments, study for assessments, and do assessment retakes.</li>
-              <li>Fundraised over $1000 for four different projects through DonorsChoose for calculators, student whiteboards, and art supplies for a Calculus Project.</li>
-              <li>Led math department meetings at my past school.</li>
+              <li>Encourage partner discussions and check-ins while maintaining and encouraging a positive learning environment.</li>
+              <span class="seeMoreLess">
+                <li>Utilize various online learning platforms to enhance the learning of my students. Platforms include IXL, iReady, and Class Dojo. </li>
+                <li> Participated in the IB Authorization Team to provide support, discuss ideas, mentor teachers, plan IB-focused unit plans, and mentor 10th grade students with their IB personal projects. </li>
+                <li>Was a member of the WASC Writing Committee, where I updated sections of the WASC report in preparation for the Accreditation visit, gathered information from other school stakeholders, and revised the final report. </li>
+                <li>Currently lead the Chess Club and assist with the middle school Robotics club. Supervised the Coding Club and Senior Committee Club in 2021-2023. Clubs meet in my classroom every week after school or during lunch.</li>
+                <li>Prepare and host tutoring before and after school to help students make up missing assignments, study for assessments, and do assessment retakes.</li>
+                <li>Fundraised over $1000 for four different projects through DonorsChoose for calculators, student whiteboards, and art supplies for a Calculus Project.</li>
+                <li>Led math department meetings at my past school.</li>
+              </span>
             </ul>
           </div>
         </div>
@@ -381,7 +428,8 @@
           <div class="workJobDescription">
             <h3>Associate's Degree</h3>
             <h3>Computer Information Systems: Full Stack Development</h3>
-            <p>[Description here] Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet dapibus nibh ut faucibus nunc, egestas id amet porttitor. Pulvinar quisque sed amet, nulla nunc. Eleifend sodales posuere fusce tempus etiam et pellentesque. Molestie risus enim neque eget dui.</p>
+            <p><em>"This Full Stack Web Development curriculum prepares students with necessary skills to seek entry-level employment in client-side and server-side web development. Instruction includes development, testing, deployment, and maintenance of secure web applications using programming languages including and not limited to HTML, CSS, JavaScript, React, and Python."</em></p>
+            <a href="https://pasadena.edu/academics/degrees-and-certificates/certificates-of-achievement/web-development-applications.php" class="educationLink" target="_blank">See a more detailed description of the program here.</a>
           </div>
         </div>
         <div class="workContent bottomBorder">
@@ -396,7 +444,8 @@
           <div class="workJobDescription">
             <h3>Master of Arts</h3>
             <h3>Teaching Secondary: Mathematics</h3>
-            <p>[Description here] Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet dapibus nibh ut faucibus nunc, egestas id amet porttitor. Pulvinar quisque sed amet, nulla nunc. Eleifend sodales posuere fusce tempus etiam et pellentesque. Molestie risus enim neque eget dui.</p>
+            <p><em>"The MAT program meets credential program standards and teacher performance expectations set by the California Commission on Teacher Credentialing (CTC)."</em></p>
+            <a href="https://rossier.usc.edu/programs/find-compare-programs/master-arts-teaching" class="educationLink" target="_blank">See a more detailed description of the program here.</a>
           </div>
         </div>
         <div class="workContent bottomBorder">
@@ -411,7 +460,8 @@
           <div class="workJobDescription">
             <h3>Bachelor of Arts</h3>
             <h3>Applied and Computational Mathematics</h3>
-            <p>[Description here] Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet dapibus nibh ut faucibus nunc, egestas id amet porttitor. Pulvinar quisque sed amet, nulla nunc. Eleifend sodales posuere fusce tempus etiam et pellentesque. Molestie risus enim neque eget dui.</p>
+            <p><em>"The USC Mathematics Department offers a variety of undergraduate degree programs. Each degree allows enough electives for students to personalize their degree and prepare for their particular interests and goals, from work in industry or government to graduate study."</em></p>
+            <a href="https://dornsife.usc.edu/mathematics/degree-requirements-undergrad/" class="educationLink" target="_blank">See a more detailed description of the program here.</a>
           </div>
         </div>
       </div>
@@ -434,8 +484,9 @@
           <h3 class="projectTitle">Cindy's Portfolio Website</h3>
           <p class="projectSkills">Skills Used: HTML and CSS</p>
           <div class="projectLinks">
-            <a href class="underline">View Project</a>
-            <a href class="underline">View Code</a>
+            <a id="project1" href="./index.html" class="underline">View Project</a>
+            <a id="source1" href="" class="underline" target="_blank" onclick="viewSource(1)">View Code</a>
+            <!-- Figure out view source code, maybe Javascript?: "view-source:"+"./projectsCode/singlePagePortfolio/index.html" -->
           </div>
         </div>
         <div class="projectItem">
@@ -443,8 +494,8 @@
           <h3 class="projectTitle">Single-Page Portfolio Website</h3>
           <p class="projectSkills">Skills Used: HTML and CSS</p>
           <div class="projectLinks">
-            <a href class="underline">View Project</a>
-            <a href class="underline">View Code</a>
+            <a href="./projectsCode/singlePagePortfolio/index.html" class="underline" target="_blank">View Project</a>
+            <a href="" class="underline" target="_blank">View Code</a>
           </div>
         </div>
         <div class="projectItem">
@@ -452,8 +503,8 @@
           <h3 class="projectTitle">Number Guessing Game</h3>
           <p class="projectSkills">Skills Used: JavaScript</p>
           <div class="projectLinks">
-            <a href class="underline">View Project</a>
-            <a href class="underline">View Code</a>
+            <a href="" class="underline" target="_blank">View Project</a>
+            <a href="" class="underline" target="_blank">View Code</a>
           </div>
         </div>
       </div>
@@ -464,7 +515,7 @@
           <p class="sectionDescription">I would love to hear about your project and how I could help!</p>
         </div>
         <div class="contactFormWrapper">
-          <form action="mailto:cindyandcode@gmail.com" method="post" enctype="text/plain" class="contactForm">
+          <form action="mailto:cindyandcode@gmail.com?subject=Inquiry from Portfolio Site" method="post" enctype="text/plain" class="contactForm">
             <div class="contactControl">
               <label for="name">Your Full Name (Required)</label>
               <input type="text" id="name" name="name" required/>
@@ -473,9 +524,14 @@
                 <label for="email">Your Email (Required)</label>
                 <input type="email" id="email" name="email" required/>
             </div>
+            <!-- When I implement JavaScript, I will edit the subject of the email using variables -->
+            <!-- <div class="contactControl">
+              <label for="subject">Subject of Message (Required)</label>
+              <input type="subject" id="subject" name="subject" required/>
+            </div> -->
             <div class="contactControl">
                 <label for="message">Your Message</label>
-                <textarea name="message" id="message" cols="30" rows="7" ></textarea>
+                <textarea name="message" id="message" cols="30" rows="8" ></textarea>
             </div>
             <div class="contactControl">
                 <button type="Submit">Send Message</button>
@@ -487,9 +543,8 @@
   </section>
 
 
-
-
   <script src="script.js"></script>
+
 </body>
 
 </html>
