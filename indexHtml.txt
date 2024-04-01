@@ -1,3 +1,10 @@
+
+
+
+<!-- Alternatively, you can go to my website, right click on the screen and select "View Source Code" -->
+
+
+
 <!DOCTYPE html>
 <html>
 
@@ -328,9 +335,6 @@
                 <li>Fundraised over $1000 for four different projects through DonorsChoose for calculators, student whiteboards, and art supplies for a Calculus Project.</li>
                 <li>Led math department meetings at my past school.</li>
               </span>
-              <div class="seeFunction">
-                See More...
-              </div>
             </ul>
           </div>
         </div>
@@ -347,16 +351,8 @@
           <div class="workJobDescription">
             <p>As a substitute teacher I...</p>
             <ul class="workJobList">
-              <li>Covered classes when teachers were unavailable </li>
-              <span class="seeMoreLess">
-                <li>Enacted lesson plans</li> 
-                <li>Monitored the classroom</li> 
-                <li>Assisted students with their assignments</li>
-                <li>Was flexible when assigned coverage for single periods in different classes or full days. </li>
-              </span>
-              <div class="seeFunction">
-                See More...
-              </div>
+              <li>Covered classes when teachers were unavailable, which included enacting lesson plans, monitoring the classroom, and assisting students.</li>
+              <li>Was flexible when assigned coverage for single periods in different classes or full days. </li>
             </ul>
           </div>
         </div>
@@ -390,21 +386,8 @@
             </div>
           </div>
           <div class="workJobDescription">
+            <p>As a project assistant at El Centro Chicano, I worked at the front desk, answered phone calls, created and edited flyers, and helped manage programs and events. I was Editing Manager for El Centro's weekly E-Newsletter.</p>
             <p>Note: El Centro Chicano is now known as <a href="https://lacasa.usc.edu/">La CASA.</a></p>
-            <p>As a project assistant at El Centro Chicano, I...</p> 
-            <ul>
-              <li>Helped manage programs and events, such as the annual Latinx Graduate Celebration</li> 
-              <span class="seeMoreLess">
-                <li>Managed the front desk while greeting visitors</li>
-                <li>Answered phone calls</li>
-                <li>Created and edited flyers</li>
-                <li>Hosted visiting high school students by presenting about El Centro and did Q&As</li>
-                <li>Was Editing Manager for El Centro's weekly E-Newsletter.</li>
-            </span>
-            <div class="seeFunction">
-              See More...
-            </div>
-            </ul>
           </div>
         </div>
         <div class="workContent bottomBorder">
@@ -506,11 +489,11 @@
         <div class="projectItem">
           <img src="./assets/portfolioProjects/cindyPortfolio.png" alt="screenshot of this portfolio website" class="projectImage"/>
           <h3 class="projectTitle">Cindy's Portfolio Website</h3>
-          <p class="projectSkills">Skills Used: HTML, CSS and Javascript</p>
+          <p class="projectSkills">Skills Used: HTML and CSS</p>
           <div class="projectLinks">
             <a id="project1" href="./index.html" class="underline">View Project</a>
-            <a id="source1" href="./indexHtml.txt" class="underline" target="_blank">View Code</a>
-            <!-- <a id="source1" href="" class="underline" target="_blank" onclick="viewSource(1)">View Code</a> -->
+            <a id="source1" href="" class="underline" target="_blank">View Code</a>
+            <a id="source1" href="" class="underline" target="_blank" onclick="viewSource(1)">View Code</a>
             <!-- Figure out view source code, maybe Javascript?: "view-source:"+"./projectsCode/singlePagePortfolio/index.html" -->
           </div>
         </div>

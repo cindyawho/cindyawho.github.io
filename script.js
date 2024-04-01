@@ -18,3 +18,20 @@ function openPDF(){
 function hireButton(){
     window.open("#contact", '_self');
 }
+
+let seeFunctionDivs = document.querySelectorAll('.seeFunction');
+console.log(seeFunctionDivs);
+for (const div of seeFunctionDivs) {
+    console.log(div);
+    div.addEventListener('click', () => {
+        if(div.innerText=="See More..."){
+            div.innerText = "See Less...";
+            div.previousElementSibling.style.display = "block";
+        } else if(div.innerText=="See Less..."){
+            div.innerText = "See More...";
+            div.previousElementSibling.style.display = "none";
+        } else {
+            div.innerText= "Congrats! You broke the code :) "
+        }
+    })
+}

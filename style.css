@@ -318,6 +318,22 @@ button:hover{
   line-height: 1.5rem;
 }
 
+.seeMoreLess{
+  display: none;
+}
+.seeFunction{
+  text-align: right;
+  font-style: italic;
+  font-weight: 500;
+  color: var(--black_MainText);
+  padding-right: 24px;
+}
+.seeFunction:hover{
+  cursor: pointer;
+  color: var(--darkGold_Button);
+}
+
+
 
 @media(min-width: 37.5em){
   .workContent{
