@@ -2,10 +2,23 @@
 <html lang="en">
    <head>
       <title>JavaScript Guessing Game Lab</title>
-      <script src="script.js"></script>
+      <link href="style.css" rel="stylesheet" type="text/css" />
    </head>
    <body>
-      <p>To test your function, call playGuessingGame() 
+      <h1 class="mainTitle">Welcome to the Number Guessing Game!</h1>
+      <section class="instructions">
+         <p>To test your function, call playGuessingGame( [#], [#] ) 
       from the JavaScript console in the browser.</p>
+         <p>For this game, you will need two players.</p>
+         <ol>
+            <li>Agree on the amount of times the player will have to guess.</li>
+            <li>Have the first player choose what number the other player will need to guess.</li>
+            <li>Player 1, in the console, type "playGuessingGame([number to guess], [amount of times opponent has to guess])". <br> For example, for a game where the secret number is 25 and we agreed on 4 attempts, type playGuessingGame(25, 4)</li>
+            <li>Pass the keyboard to the second player and let them try it out!</li>
+            <li>Good luck and have fun!</li>
+         </ol>
+      </section>
+      
+      <script src="script.js"></script>
    </body>
 </html>
