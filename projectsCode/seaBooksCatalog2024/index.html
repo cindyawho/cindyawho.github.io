@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>2024 Books | Home</title>
+    <meta name="description" content="Books I Have Read in 2024">
+    <link rel="stylesheet" href="style.css" />
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="main-header" id="main-header">
+        <h1 class="title">Books I've Read in 2024</h1>
+    </header>
+    <div class="sortingSection">
+        <button onclick="sortByTitleAZ();" id="sortTitleAZ">
+            Sort By Title ↓
+        </button>
+        <button onclick="sortByTitleZA();" id="sortTitleZA" style="display: none;">
+            Sort By Title ↑
+        </button>
+        <button onclick="sortByAuthorAZ();" id="sortAuthorAZ">
+            Sort By Author ↓
+        </button>
+        <button onclick="sortByAuthorZA();" id="sortAuthorZA" style="display: none;">
+            Sort By Author ↑
+        </button>
+        <button onclick="sortByPagesLH();" id="sortPagesLH">
+            Sort By Pages ↓
+        </button>
+        <button onclick="sortByPagesHL();" id="sortPagesHL" style="display: none;">
+            Sort By Pages ↑
+        </button>
+        <button onclick="sortByYearLH();" id="sortYearLH">
+            Sort By Year of Publication ↓
+        </button>
+        <button onclick="sortByYearHL();" id="sortYearHL" style="display: none;">
+            Sort By Year of Publication ↑
+        </button>
+        <button onclick="sortByRatingHL();" style="display: none;" id="sortRatingHL">
+            Sort By Rating ↑
+        </button>
+        <button onclick="sortByRatingLH();" id="sortRatingLH">
+            Sort By Rating ↓
+        </button>
+        <a href="#addCard"><button class="addCardLinkButton">
+            Add a Book
+        </button></a>
+        <br>
+        <label for="filter">Search by: </label>
+        <select name="filterSelect" id="filterSelect" size="1" onchange="filterCategoryCheck()">
+            <option value="title">Title</option>
+            <option value="author">Author</option>
+            <option value="genre">Genre</option>
+        </select>
+        <select name="genre" id="genre" class="inputGenre" size="1" style="display: none;">
+            <option value="mythology">Mythology</option>
+            <option value="fantasy">Fantasy</option>
+            <option value="mystery">Mystery</option>
+            <option value="historical fiction">Historical Fiction</option>
+            <option value="nonfiction">Nonfiction</option>
+            <option value="science fiction">Science Fiction</option>
+            <option value="romance">Romance</option>
+        </select>
+        <input type="text" id="filter" name="filter" class="filter">
+        <button class="filterButton" onclick="filterFunction()">Find</button>
+        <button class="filterResetButton" onclick="filterResetFunction()">Reset</button>
+    </div>
+    <div class="searchResults" style="display: none;">
+        <p class="searchResultsDesc"><span class="resultsNumber" id="resultsNumber"></span> Search Results Found!</p>
+    </div>
+    <div id="card-container">
+        
+    </div>
+    <div class="card" style="display: none;">
+        <div class="card-content">
+            <h2 class="bookTitle">Book Title</h2>
+            <h3 class="bookAuthor">Author</h3>
+            <a href="" class="imgLink" target="_blank"><img src="" alt="Book Poster"></a>
+            <ul>
+            </ul>
+            <p class="rating"></p>
+        </div>
+    </div>
+
+    <div class="addCard" id="addCard">
+        <p class="addCardDescription">Hello! To add a book to the database, please fill out the following information, then click "Add Book".</p>
+        <form action="" class="addCardForm">
+            <label for="title">Book Title: </label>
+                <input type="text" id="title" name="title" class="inputTitle" required><br>
+            <label for="author">Author: </label>
+                <input type="text" id="author" name="author" class="inputAuthor" required><br>
+            <label for="yearOfPub">Year of Publication: </label>
+                <input type="number" id="yearOfPub" name="yearOfPub" max="2025" class="inputYear"><br>
+            <label for="pages">Pages: </label>
+                <input type="number" id="pages" name="pages" min="1" class="inputPages"><br>
+            <!--Checkboxes work great! I had forgotten about them lol -->
+            <label for="genre">Genre(s): </label>
+                <input type="checkbox" id="genre1" name="genre1" value="Mythology">
+                <label for="genre1">Mythology</label>
+                <input type="checkbox" id="genre2" name="genre2" value="Fantasy">
+                <label for="genre2">Fantasy</label>
+                <input type="checkbox" id="genre3" name="genre3" value="Mystery">
+                <label for="genre3">Mystery</label>
+                <input type="checkbox" id="genre4" name="genre4" value="Historical Fiction">
+                <label for="genre4">Historical Fiction</label>
+                <input type="checkbox" id="genre5" name="genre5" value="Nonfiction">
+                <label for="genre5">Nonfiction</label>
+                <input type="checkbox" id="genre6" name="genre6" value="Science Fiction">
+                <label for="genre6">Science Fiction</label>
+                <input type="checkbox" id="genre7" name="genre7" value="Romance">
+                <label for="genre7">Romance</label><br>
+                <!-- <select name="genre" id="genre" class="inputGenre" multiple="multiple">
+                    <option value="mythology">Mythology</option>
+                    <option value="fantasy">Fantasy</option>
+                    <option value="mystery">Mystery</option>
+                    <option value="historicalFiction">Historical Fiction</option>
+                    <option value="nonfiction">Nonfiction</option>
+                    <option value="scienceFiction">Science Fiction</option>
+                    <option value="romance">Romance</option>
+                </select> <span class="genreSelectNote">(Note: hold Ctrl/Command to select multiple)</span><br> -->
+            <label for="rating">Rating: </label>
+                <input type="number" id="rating" name="rating" min="0" max="5"><br>
+            <label for="url">Goodreads URL: </label>
+                <input type="url" id="url" name="url" class="inputURL"><br>
+            <label for="image">Book Cover URL: </label>
+                <input type="url" id="image" name="image" class="inputimage"><br>
+            <label for="quote">Quote: </label>
+                <input type="text" id="quote" name="quote" class="inputquote" required><br>
+            <button onclick="addCard();">Add Book</button>
+        </form>
+    </div>
+
+    <div class="footer">
+        <button onclick="quoteAlert();">
+            Get A Quote!
+        </button>
+        <button onclick="removeLastCard();">
+            Remove A Card!
+        </button>
+        <a href="#main-header"><button>
+            Back to the Top
+        </button></a>
+    </div>
+    <script type="text/javascript" src="data.js"></script>
+    <script type="text/javascript" src="scripts.js"></script>
+</body>
+
+</html>

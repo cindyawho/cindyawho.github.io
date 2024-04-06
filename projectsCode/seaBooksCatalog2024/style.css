@@ -1,0 +1,193 @@
+/* ************* Global Styling ************* */
+:root{
+    --blueBg: rgb(29, 215, 200);
+    --blueNavyButton: rgb(0, 57, 132);
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+button {
+    text-align: center;
+    background-color: var(--blueNavyButton);
+    border: none;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 40px;
+    border-radius: 10px;
+    color: white;
+    font-size: 0.75rem;
+    font-size: clamp(0.75rem, 0.62rem + 0.6933333333333332vw, 1.4rem);
+    cursor: pointer;
+    margin: 5px;
+}
+
+button:hover{
+    background-color: var(--blueBg);
+    color: black;
+}
+
+form, textarea, input, label, select{
+    font-size: 0.75rem;
+    font-size: clamp(0.75rem, 0.6rem + 0.8vw, 1.5rem);
+    padding: 5px;
+    margin: 5px;
+    border-radius: 10px;
+}
+
+select:hover{
+    background-color: var(--blueBg);
+}
+/* ************* Start of Individual Class Styling ************* */
+/* Thank you stack Overflow :) */
+@keyframes slideInFromAbove {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+header {  
+    /* Calls the slideInFromLeft animation defined above */
+    animation: 1s ease-out 0s 1 slideInFromAbove;
+}  
+
+.main-header {
+    background-color: var(--blueBg);
+    padding-bottom: 10px;
+}
+
+.title {
+    text-align: center;
+    margin: 0;
+    padding-top: 35px;
+    font-size: 2rem;
+    font-size: clamp(2rem, 0.8rem + 6.4vw, 8rem);
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: normal;
+    color: rgb(0, 0, 0);
+    text-shadow: clamp(0.125rem, 0.1rem + 0.13vw, 0.25rem) clamp(0.125rem, 0.1rem + 0.13vw, 0.25rem) gray;
+}
+
+.sortingSection{
+    padding: 10px;
+}
+
+.addCardLinkButton{
+    background-color: var(--blueBg);
+    color: black;
+    position: absolute;
+    right: 0;
+    left: auto;
+}
+.addCardLinkButton:hover{
+    background-color: var(--blueNavyButton);
+    color: white;
+}
+
+.searchResults {
+    width: 100%;
+    font-size: 1rem;
+    font-size: clamp(1rem, 0.85rem + 0.8vw, 1.75rem);
+    text-align: center;
+    font-style: italic;
+}
+
+/* ************* CARD Styling ************* */
+#card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px;
+}
+
+.card {
+    width: 25rem; /*300px*/
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 5px;
+}
+
+.card-content {
+    padding: 20px;
+    font-family: "Verdana";
+    color: var(--blueNavyButton);
+}
+
+.card-content h2 {
+    margin-top: 0;
+    font-size: 1.25rem;
+    font-size: clamp(1.25rem, 1.1rem + 0.8vw, 2rem);
+    text-align: center;
+}
+
+.card-content h3{
+    font-size: 1rem;
+    font-size: clamp(1rem, 0.85rem + 0.8vw, 1.75rem);
+    font-weight: 400;
+    text-align: right;
+    /* font-style: italic; */
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.rating{
+    text-align: center;
+    font-size: 0.75rem;
+    font-size: clamp(0.75rem, 0.6rem + 0.8vw, 1.5rem);
+    color: gold;
+}
+
+ul li{
+    line-height: 2rem;
+    font-size: 0.75rem;
+    font-size: clamp(0.75rem, 0.6rem + 0.8vw, 1.5rem);
+}
+
+/* ************* FORM Styling ************* */
+.addCard{
+    padding: 2rem;
+    font-size: 0.75rem;
+    font-size: clamp(0.75rem, 0.6rem + 0.8vw, 1.5rem);
+    border-top: 3px var(--blueNavyButton) ridge;
+}
+
+/* ************* Footer Styling ************* */
+
+.footer {
+    display: flex;
+    justify-content: center;
+    background-color: var(--blueBg);
+    padding: 10px;
+}
+
+/* Styling for Phone */
+@media (max-width: 55em) {
+    .card{
+        width: 100%;
+    }
+    .card-content{
+        display: grid;
+        grid-template-columns: 1fr, 2fr;
+        grid-template-rows: repeat(4, auto);
+    }
+    .imgLink{
+        grid-row: 1 / 5;
+        grid-column: 1 / 2;
+    }
+    .bookTitle{
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+        padding-left: 10px;
+    }
+}
