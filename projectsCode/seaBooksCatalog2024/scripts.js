@@ -101,7 +101,7 @@ function editCardContent(card, newTitle, newImageURL, newAuthor, newPages, newRa
     const cardRating = card.querySelector("p");
     let starRating = "";
     for(let i = 0; i < newRating; i++){
-        starRating = starRating + "★";
+        starRating = starRating + "⭐";
     }
     cardRating.textContent = starRating;
     //Descriptor of rating
@@ -384,4 +384,45 @@ function filterResetFunction(){
     }
     resultsDiv = document.querySelector(".searchResults");
     resultsDiv.style.display = "none";
+}
+
+//see Quote from book
+function seeQuote(thisButton){
+    // console.log(thisButton);
+    let cardContainer = thisButton.parentNode.parentNode;
+    let titleText =  cardContainer.childNodes[1].innerText;
+    // console.log(titleText);
+    let i = 0;
+    for(i; i < books.length; i++){
+        // console.log(books[i].title);
+        if(books[i].title == titleText){
+            break;
+        }
+    }
+    // alert(books[i].quote + "\n  From the book: " + books[i].title);
+    // console.log(thisButton.parentNode.parentNode.childNodes[13]);
+    ownAlert = thisButton.parentNode.parentNode.childNodes[15];
+    // console.log(ownAlert);
+    ownAlert.childNodes[5].innerText = books[i].quote;
+    ownAlert.style.display = "inline-block";
+}
+
+//Delete a card from list
+function removeACard(thisButton){
+    let cardContainer = thisButton.parentNode.parentNode;
+    // console.log(cardContainer);
+    let titleText =  cardContainer.childNodes[1].innerText;
+    // console.log(titleText);
+    let i = 0;
+    for(i; i < books.length; i++){
+        // console.log(books[i].title);
+        if(books[i].title == titleText){
+            break;
+        }
+    }
+    if(confirm("Are you sure you want to delete this book from the site?")){
+        //tried to use delete at first but since I have an array, splice works
+        books.splice(i, 1);
+        showCards();
+    }
 }
