@@ -203,6 +203,9 @@ function sortByPagesLH() {
     // console.log("In the function sortByPages()!");
     // document.getElementById("sortPagesHL").style.display = "inline-block";
     // document.getElementById("sortPagesLH").style.display = "none";
+    //Get rid of search results message if there are any
+    resultsDiv = document.querySelector(".searchResults");
+    resultsDiv.style.display = "none";
     books.sort(function(a, b){
         // console.log("a: " + a);
         // console.log("b: " + b);
@@ -211,30 +214,45 @@ function sortByPagesLH() {
     showCards();
 }
 function sortByPagesHL() {
+    //Get rid of search results message if there are any
+    resultsDiv = document.querySelector(".searchResults");
+    resultsDiv.style.display = "none";
     books.sort(function(a, b){
         return b.pages - a.pages;
     });
     showCards();
 }
 function sortByYearLH() {
+    //Get rid of search results message if there are any
+    resultsDiv = document.querySelector(".searchResults");
+    resultsDiv.style.display = "none";
     books.sort(function(a, b){
         return a.yearOfPub - b.yearOfPub;
     });
     showCards();
 }
 function sortByYearHL() {
+    //Get rid of search results message if there are any
+    resultsDiv = document.querySelector(".searchResults");
+    resultsDiv.style.display = "none";
     books.sort(function(a, b){
         return b.yearOfPub - a.yearOfPub;
     });
     showCards();
 }
 function sortByRatingLH() {
+    //Get rid of search results message if there are any
+    resultsDiv = document.querySelector(".searchResults");
+    resultsDiv.style.display = "none";
     books.sort(function(a, b){
         return a.rating - b.rating;
     });
     showCards();
 }
 function sortByRatingHL() {
+    //Get rid of search results message if there are any
+    resultsDiv = document.querySelector(".searchResults");
+    resultsDiv.style.display = "none";
     books.sort(function(a, b){
         return b.rating - a.rating;
     });
@@ -243,6 +261,9 @@ function sortByRatingHL() {
 
 //Creating sorting functions by for Author and Title
 function sortByAuthorAZ(){
+    //Get rid of search results message if there are any
+    resultsDiv = document.querySelector(".searchResults");
+    resultsDiv.style.display = "none";
     books.sort(function(a, b){
         // console.log("a: " + a.author);
         // console.log("b: " + b.author);
@@ -258,6 +279,9 @@ function sortByAuthorAZ(){
     showCards();
 }
 function sortByAuthorZA(){
+    //Get rid of search results message if there are any
+    resultsDiv = document.querySelector(".searchResults");
+    resultsDiv.style.display = "none";
     books.sort(function(a, b){
         if(a.author < b.author){
             return 1;
@@ -271,6 +295,9 @@ function sortByAuthorZA(){
 }
 
 function sortByTitleAZ(){
+    //Get rid of search results message if there are any
+    resultsDiv = document.querySelector(".searchResults");
+    resultsDiv.style.display = "none";
     books.sort(function(a, b){
         if(a.title < b.title){
             return -1;
@@ -283,6 +310,9 @@ function sortByTitleAZ(){
     showCards();
 }
 function sortByTitleZA(){
+    //Get rid of search results message if there are any
+    resultsDiv = document.querySelector(".searchResults");
+    resultsDiv.style.display = "none";
     books.sort(function(a, b){
         if(a.title < b.title){
             return 1;
@@ -389,22 +419,38 @@ function filterResetFunction(){
 //see Quote from book
 function seeQuote(thisButton){
     // console.log(thisButton);
-    let cardContainer = thisButton.parentNode.parentNode;
-    let titleText =  cardContainer.childNodes[1].innerText;
-    // console.log(titleText);
-    let i = 0;
-    for(i; i < books.length; i++){
-        // console.log(books[i].title);
-        if(books[i].title == titleText){
-            break;
+    if(thisButton.innerText == "See Quote"){
+        // console.log("User wants to SEE Quote.")
+        thisButton.innerText = "Hide Quote";
+        let cardContainer = thisButton.parentNode.parentNode;
+        let titleText =  cardContainer.childNodes[1].innerText;
+        // console.log(titleText);
+        let i = 0;
+        for(i; i < books.length; i++){
+            // console.log(books[i].title);
+            if(books[i].title == titleText){
+                break;
+            }
         }
+        // alert(books[i].quote + "\n  From the book: " + books[i].title); //Original idea for quote
+        // console.log(thisButton.parentNode.parentNode.childNodes[13]); //changed to 15 because of added lines/comment even
+        ownAlert = thisButton.parentNode.parentNode.childNodes[15];
+        // console.log(ownAlert);
+        ownAlert.childNodes[5].innerText = books[i].quote;
+        ownAlert.style.display = "inline-block";
+    } else{
+        // console.log("User wants to HIDE Quote.")
+        thisButton.innerText = "See Quote";
+        ownAlert = thisButton.parentNode.parentNode.childNodes[15];
+        ownAlert.style.display = "none";
     }
-    // alert(books[i].quote + "\n  From the book: " + books[i].title);
-    // console.log(thisButton.parentNode.parentNode.childNodes[13]);
-    ownAlert = thisButton.parentNode.parentNode.childNodes[15];
-    // console.log(ownAlert);
-    ownAlert.childNodes[5].innerText = books[i].quote;
-    ownAlert.style.display = "inline-block";
+    
+}
+//if User closes quote with the x button
+function closeQuote(thisButton){
+    thisButton.parentElement.style.display='none';
+    // console.log(thisButton.parentNode.previousElementSibling.childNodes[1].innerText);
+    thisButton.parentNode.previousElementSibling.childNodes[1].innerText = "See Quote";
 }
 
 //Delete a card from list
