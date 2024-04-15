@@ -3,39 +3,37 @@ function playGuessingGame(numToGuess, totalGuesses){
     if(isNaN(numToGuess)){
         return -3;
     }
-
-    let playerInput = prompt("Enter a number between 1 and 100.");
-    
-    if(playerInput === null || playerInput === undefined){ //moved this before other pieces of code.
-        return -1; // Do not start game, exit function
-    }
-    
     if(totalGuesses === undefined){
         totalGuesses = 10; // default value of attempts is 10
     }
-    let originalGuess = totalGuesses; // save the original amount of attempts the user input
+    let playerInput;
 
+    // totalGuesses--; // correct amount of guesses player has
 
-    while(totalGuesses > 0){
-        if(playerInput === null || playerInput === undefined){ //moved this before other pieces of code.
+   for(let i = 0; i < totalGuesses; i++){
+        if(i==0){
+            playerInput = prompt("Enter a number between 1 and 100.");
+            updateTable(totalGuesses, playerInput);
+        } 
+        else if(playerInput === null || playerInput === undefined){ //moved this before other pieces of code.
             return -1; // exit function if error is found
-        }
-        if(isNaN(playerInput)){
+        } 
+        else if(isNaN(playerInput)){
             playerInput = prompt("Please enter a number.");
             continue; // If the input is not a number, remind user to input number
         }
         else if(playerInput < numToGuess){
+            updateTable(totalGuesses, playerInput);
             playerInput = prompt(playerInput + " is too small. Guess a larger number.");
-            totalGuesses--; //subtract an attempt if the guess is too small
             continue;
         }
         else if(playerInput > numToGuess){
+            updateTable(totalGuesses, playerInput);
             playerInput = prompt(playerInput + " is too large. Guess a smaller number.");
-            totalGuesses--; //subtract an attempt if the guess is too large
             continue;
         }
         else if(playerInput == numToGuess){
-            totalGuesses--; //subtract an attempt when the player guess correctly!
+            updateTable(totalGuesses, playerInput);
             return (totalGuesses); // return the amount of attempts that the player had remaining
         }
     }
@@ -73,5 +71,11 @@ function gameResult(gameReturn){
         message = "You had " + gameReturn + " attempts remaining. Player 2 Wins!";
     }
     document.getElementById("gameResultMessage").innerHTML = message;
+}
 
+function updateTable(totalGuesses, numGuessed){
+    const tableElem = document.getElementById("gameTable");
+    console.log("Total Guesses: " + totalGuesses);
+    console.log("Number Guessed: " + numGuessed);
+    console.log("Table: " + tableElem + "\n");
 }
