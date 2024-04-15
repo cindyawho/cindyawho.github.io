@@ -23,11 +23,25 @@
       <h3>Player 1</h3>
       <form>
          <label for="secret">Secret Number for Opponent to Guess:</label>
-         <input type="password" id="secret" name="secret" min="1" max="100"><br>
+         <input type="password" id="secret" name="secret" min="1" max="100"
+            pattern="[0-9]"><br>
          <label for="attempts">Number of Attempts Opponent Has:</label>
          <input type="number" id="attempts" name="attempts" min="1" max="25"><br>
          <button class="startButton" id="startButton">Start Game</button>
        </form>
+       <h3>Player 2 Result</h3>
+       <table>
+         <tr>
+            <th>Attempt Number</th>
+            <td></td>
+         </tr>
+         <tr>
+            <th>Number Guessed</th>
+            <td></td>
+         </tr>
+       </table>
+       <h3>Game Result</h3>
+       <p id="gameResultMessage"></p>
       
       <script src="script.js"></script>
    </body>
