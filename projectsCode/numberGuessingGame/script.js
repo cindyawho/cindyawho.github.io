@@ -13,7 +13,7 @@ function playGuessingGame(numToGuess, totalGuesses){
    for(let i = 0; i < totalGuesses; i++){
         if(i==0){
             playerInput = prompt("Enter a number between 1 and 100.");
-            updateTable(totalGuesses, playerInput);
+            updateTable(i, totalGuesses, playerInput);
         } 
         else if(playerInput === null || playerInput === undefined){ //moved this before other pieces of code.
             return -1; // exit function if error is found
@@ -23,17 +23,17 @@ function playGuessingGame(numToGuess, totalGuesses){
             continue; // If the input is not a number, remind user to input number
         }
         else if(playerInput < numToGuess){
-            updateTable(totalGuesses, playerInput);
+            updateTable(i, totalGuesses, playerInput);
             playerInput = prompt(playerInput + " is too small. Guess a larger number.");
             continue;
         }
         else if(playerInput > numToGuess){
-            updateTable(totalGuesses, playerInput);
+            updateTable(i, totalGuesses, playerInput);
             playerInput = prompt(playerInput + " is too large. Guess a smaller number.");
             continue;
         }
         else if(playerInput == numToGuess){
-            updateTable(totalGuesses, playerInput);
+            updateTable(i, totalGuesses, playerInput);
             return (totalGuesses); // return the amount of attempts that the player had remaining
         }
     }
@@ -73,8 +73,12 @@ function gameResult(gameReturn){
     document.getElementById("gameResultMessage").innerHTML = message;
 }
 
-function updateTable(totalGuesses, numGuessed){
+function updateTable(attemptsMade, totalGuesses, numGuessed){
     const tableElem = document.getElementById("gameTable");
+    const attemptRow = tableElem.childNodes[1].childNodes[0];
+    console.log(attemptRow);
+    const numGuessRow = tableElem.childNodes[1].childNodes[2];
+    console.log(numGuessRow);
     console.log("Total Guesses: " + totalGuesses);
     console.log("Number Guessed: " + numGuessed);
     console.log("Table: " + tableElem + "\n");
