@@ -38,3 +38,10 @@ function playGuessingGame(numToGuess, totalGuesses){
     return 0;
     
 }
+
+document.getElementById("startButton").addEventListener("click", startGame);
+function startGame(){
+    secretNum = document.getElementById("secret").value;
+    attemptsNum = document.getElementById("attempts").value;
+    playGuessingGame(secretNum, attemptsNum);
+}

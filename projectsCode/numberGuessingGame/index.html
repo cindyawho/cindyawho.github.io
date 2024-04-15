@@ -7,6 +7,7 @@
    <body>
       <h1 class="mainTitle">Welcome to the Number Guessing Game!</h1>
       <section class="instructions">
+         <h2>Instructions</h2>
          <p>To test your function, call playGuessingGame( [#], [#] ) 
       from the JavaScript console in the browser.</p>
          <p>For this game, you will need two players.</p>
@@ -18,6 +19,15 @@
             <li>Good luck and have fun!</li>
          </ol>
       </section>
+      <h2>Gameplay (In Progress, please follow instructions above)</h2>
+      <h3>Player 1</h3>
+      <form>
+         <label for="secret">Secret Number for Opponent to Guess:</label>
+         <input type="password" id="secret" name="secret" min="1" max="100"><br>
+         <label for="attempts">Number of Attempts Opponent Has:</label>
+         <input type="number" id="attempts" name="attempts" min="1" max="25"><br>
+         <button class="startButton" id="startButton">Start Game</button>
+       </form>
       
       <script src="script.js"></script>
    </body>
