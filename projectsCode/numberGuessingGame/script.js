@@ -1,9 +1,10 @@
 function playGuessingGame(numToGuess, totalGuesses){
     event.preventDefault();
+    createTable();
     if(isNaN(numToGuess)){
         return -3;
     }
-    if(totalGuesses === undefined){
+    if(totalGuesses === undefined){ //~~~~~~~~~~NEED TO FIX WHEN no guesses are input
         totalGuesses = 10; // default value of attempts is 10
     }
     let playerInput;
@@ -75,26 +76,26 @@ function gameResult(gameReturn){
 
 function createTable(){ //for a new game
     const tableElem = document.getElementById("gameTable");
-    tableElem.deleteRow(0);
     tableElem.deleteRow(1);
+    tableElem.deleteRow(0);
 
     let attemptRow = tableElem.insertRow(0);
     th0 = document.createElement('th');
     th0.innerHTML = "Attempt Number";
     attemptRow.appendChild(th0);
     
-    let numGuessRow = tableElem.insertRow(1);
+    let numGuessRow = tableElem.insertRow(-1);
     th1 = document.createElement('th');
     th1.innerHTML = "Number Guessed";
-    attemptRow.appendChild(th1);    
+    numGuessRow.appendChild(th1);    
 }
 
 function updateTable(attemptsMade, totalGuesses, numGuessed){
     const tableElem = document.getElementById("gameTable");
-    const attemptRow = tableElem.childNodes[1].childNodes[0];
-    console.log(attemptRow);
-    const numGuessRow = tableElem.childNodes[1].childNodes[2];
-    console.log(numGuessRow);
+    const attemptRow = tableElem.childNodes[1].childNodes[2];
+    // console.log(attemptRow);
+    const numGuessRow = tableElem.childNodes[1].childNodes[3];
+    // console.log(numGuessRow);
     console.log("Total Guesses: " + totalGuesses);
     console.log("Number Guessed: " + numGuessed);
 
