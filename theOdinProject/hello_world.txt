@@ -1,0 +1,3 @@
+Hello World! 
+I'm making text edits within Visual Studio Code. 
+I'm staging and making commits using the terminal.
