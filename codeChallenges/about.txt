@@ -1,0 +1,6 @@
+My solutions to LeetCode and HackerRank challenges will be included in this folder. 
+
+My code may not be the cleanest nor the most efficient but the solutions in here get the job done.
+
+LeetCode profile: https://leetcode.com/u/cindyawho/
+HackerRank profile: https://www.hackerrank.com/profile/cindyandcode

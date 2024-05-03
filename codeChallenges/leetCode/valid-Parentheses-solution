@@ -1,0 +1,34 @@
+class Solution:
+    def isValid(self, s: str) -> bool:
+        checkString = []
+        result = True
+        resultCheck = 0
+        if s == "()" or s == "[]" or s == "\{\}":
+            return True
+        if len(s)%2 != 0:
+            return False
+        else: 
+            j = 0
+            for i in range(len(s)):
+                checkString.append(s[i])
+                # print("i's value: ", i, " and j's value: ", j)
+                # # print("checkString array: ", checkString, " and s string: ", s)
+                # print("s string at i: ", s[i], " and checkString array at j: ", checkString[j])
+                if i == 0:
+                    j = j+1
+                    continue
+                elif (checkString[j-1] == "(" and checkString[j] == ")") or (checkString[j-1] == "[" and checkString[j] == "]") or (checkString[j-1] == "{" and checkString[j] == "}"):
+                    checkString.pop(j)
+                    checkString.pop(j-1)
+                    j -= 1
+                    resultCheck += 1
+                    continue
+                elif checkString[j] == ")" or checkString[j] == "]" or checkString[j] == "}":
+                    return False
+                j += 1
+        if resultCheck == len(s)/2:
+            return True
+        else:
+            return False
+
+        return result
