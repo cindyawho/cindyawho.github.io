@@ -125,3 +125,19 @@ def miniMaxSum(arr):
     maxSum = totalSum - smallestNumber
     print(miniSum, maxSum)
 
+# 05/05/24
+# 'birthdayCakeCandles' function below.
+# https://www.hackerrank.com/challenges/birthday-cake-candles/problem?isFullScreen=true
+# The function is expected to return an INTEGER.
+# The function accepts INTEGER_ARRAY candles as parameter.
+
+def birthdayCakeCandles(candles):
+    tallest = 0
+    count = 0
+    for i in range(len(candles)):
+        if candles[i] > tallest:
+            tallest = candles[i]
+            count = 1
+        elif candles[i] == tallest:
+            count += 1
+    return count
