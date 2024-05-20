@@ -1,0 +1,162 @@
+:root {
+    --bg-dark: #1F2937;
+    --fc-hero-white: #f9faf8;
+    --fc-hero-sec: #E5E7EB;
+    --fc-logo: #F9FAF8;
+    --bg-blue-button: #3882F6;
+    --fc-content-header: #1F2937;
+    --bg-quote: #E5E7EB;
+    --fc-quote: #1F2937;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+.hero, .footer {
+    background-color: var(--bg-dark);
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    padding: 5px 75px;
+}
+.header-logo {
+    margin-right: auto;
+    color: var(--fc-logo);
+}
+.header-links {
+    list-style-type: none;
+    display: flex;
+    gap: 16px;
+    color: var(--fc-hero-sec);
+}
+a{
+    text-decoration: none;
+    color: var(--fc-hero-sec);
+}
+
+.hero-secondary{
+    padding: 55px 75px 100px 75px;
+    display: flex;
+    gap: 40px;
+}
+.hero-secondary-content{
+    flex-basis: auto;
+}
+.hero-secondary-content h1{
+    color: var(--fc-hero-white);
+    font-size: 48px;
+    font-weight: bolder;
+    margin: 0;
+}
+.hero-secondary-content p {
+    color: var(--fc-hero-sec);
+    font-size: 18px;
+}
+.hero-secondary img{
+    margin-left: auto;
+}
+
+button {
+    background-color: var(--bg-blue-button);
+    border: none;
+    border-radius: 5px;
+    padding: 5px 15px;
+    color: var(--fc-hero-white);
+}
+
+.gallery {
+    justify-content: center;
+    text-align: center;
+    padding: 32px 0px;
+}
+.gallery-images{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 24px;
+}
+.gallery-item {
+    min-width: 150px;
+    max-width: 150px;
+}
+.gallery-item img{
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border: 2px solid var(--bg-blue-button);
+  border-radius: 5px;
+}
+.gallery-item a{
+    color: var(--bg-dark)
+}
+
+.quote-section {
+    background-color: var(--bg-quote);
+    padding: 50px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.quote {
+    min-width: none;
+    max-width: 600px;
+    color: var(--fc-quote);
+    font-size: 36px;
+    font-weight: 100;
+    font-style: italic;
+}
+.author {
+    text-align: right;
+}
+
+.signUp-section{
+    display: flex;
+    padding: 50px 100px;
+    justify-content: center;
+    align-items: center;
+}
+.signUp-block {
+    background-color: var(--bg-blue-button);
+    border-radius: 5px;
+    padding:40px 100px;
+    display: flex;
+    align-items: center;
+    width: 600px;
+    flex-grow: 1;
+    min-width: 300px;
+    max-width: 700px;
+}
+.signUp-title {
+    margin: 0;
+    padding: 0;
+    color: var(--fc-hero-white);
+}
+.signUp-description {
+    color: var(--fc-hero-sec);
+    margin: 0;
+    padding-top: 5px;
+}
+.signUp-button {
+    margin-left: auto;
+}
+.signUp-button button {
+    border: 1px var(--fc-hero-white) solid;
+}
+
+.footer {
+    padding: 40px;
+    text-align: center;
+    color: var(--fc-hero-sec);
+}

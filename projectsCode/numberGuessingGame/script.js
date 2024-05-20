@@ -9,8 +9,6 @@ function playGuessingGame(numToGuess, totalGuesses){
     }
     let playerInput;
 
-    // totalGuesses--; // correct amount of guesses player has
-
    for(let i = 0; i < totalGuesses; i++){
         if(i==0){
             playerInput = prompt("Enter a number between 1 and 100.");
