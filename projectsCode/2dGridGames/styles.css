@@ -1,0 +1,61 @@
+:root {
+    /* COLORS */
+    --backgroundOrange: rgb(246, 145, 30);
+    --mainTextNavy: navy;
+    --black: #000000;
+
+    /* FONTS and SIZES */
+    --fontHeaderFascinate: "Fascinate Inline", sans-serif;
+    --fontKanit: "Kanit", sans-serif;
+    --fs-24px: 1.5rem;
+    --fs-32px: 2rem;
+    --fs-64px: 4rem;
+}
+
+body{
+    background-color: var(--backgroundOrange);
+}
+
+h1{
+    text-align: center;
+    color: var(--mainTextNavy);
+    font-family: var(--fontHeaderFascinate);
+    font-size: var(--fs-64px);
+}
+
+p{
+    font-family: var(--fontKanit);
+    text-align: center;
+    font-size: var(--fs-32px);
+}
+
+ul, li{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+    color: var(--mainTextNavy);
+}
+
+.gameSelector {
+    display: flex;
+    /* outline: 1px red solid; */
+    flex-wrap: wrap;
+}
+.gameSelector li{
+    /* outline: 1px blue solid; */
+    margin: 5px;
+    padding: 5px;
+    flex-grow: 1;
+    padding-bottom: 32px;
+}
+
+li{
+    text-align: center;
+    font-family: var(--fontKanit);
+    font-weight: bold;
+    font-size: var(--fs-24px);
+}
