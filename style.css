@@ -318,6 +318,10 @@ button:hover{
   line-height: 1.5rem;
 }
 
+.workJobList li{
+  margin-bottom: 5px;
+}
+
 .seeMoreLess{
   display: none;
 }
