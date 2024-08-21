@@ -591,6 +591,11 @@ button:hover{
   /* border-bottom: 1px solid var(--gray_Background); */
 }
 
+.infoBarSkills-Desktop .level{
+  font-size: .75rem;
+  color: var(--darkGold_Button);
+}
+
 /* Info Bar Resume Button */
 .infoBarResume{
   grid-column: 2 / 4;
@@ -665,9 +670,8 @@ button:hover{
   .infoBarSkills{
     border-bottom: 1px solid var(--gray_Background);
     grid-column: 1;
-    align-items: center;
     /* text-align: center; */
-    padding: 15px 20px 15px 20px;
+    padding: 15px 10px;
   }
 
   /* Info Bar Resume Button */
@@ -677,6 +681,13 @@ button:hover{
   .infoBarResumeButton{
     width: 100%;
     background-color: var(--darkGold_Button);
+  }
+  .row {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
   }
 
 }
