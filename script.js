@@ -12,7 +12,7 @@ function viewSource(projectIdNumber) {
 
 function openPDF(){
     // window.open(th.href,'_blank');
-    window.open("./assets/CindyAndradeResume-2024Fall.pdf",'_blank');
+    window.open("./assets/CindyAndradeResume-webs.pdf",'_blank');
 }
 
 function hireButton(){
