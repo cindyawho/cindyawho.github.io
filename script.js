@@ -62,3 +62,46 @@ function showCards() {
         cardContainer.appendChild(nextCard); // Add new card to the container
     }
 }
+
+function editCardContent(card, title, summary, imgURL, imgAlt, skills, demoURL, gitHubLink, codeURL) {
+    card.style.display = "block";
+
+    const cardHeader = card.querySelector("h3");
+    cardHeader.textContent = title;
+
+    const cardAuthor = card.querySelector(".projectSummary");
+    cardAuthor.textContent = summary;
+
+    const cardImage = card.querySelector("img");
+    cardImage.src = imgURL;
+    cardImage.alt = imgAlt;
+    const cardLink = card.querySelector(".imgLink");
+    cardLink.href = demoURL;
+
+    const cardSkills = card.querySelector(".projectSkills");
+    let skillsText = "";
+    for(let i = 0; i < skills.length; i++){
+        if(skills.length == 1){
+            skillsText = skillsText + skills[i];
+            break;
+        }
+        if(i == skills.length - 1){
+            skillsText = skillsText + "and "
+        }
+        skillsText = skillsText + skills[i];
+        if(i != skills.length-1){
+            skillsText = skillsText + ", ";
+        } 
+    }
+    cardSkills.textContent = skillsText;
+    
+    const cardProjectLink = card.querySelector(".projectDemo");
+    cardProjectLink.href = demoURL;
+
+    const cardCodeLink = card.querySelector(".projectCode");
+    if(gitHubLink.length > 0){
+        cardCodeLink.href = gitHubLink;
+    } else {
+        cardCodeLink.href = codeURL;
+    }
+}
