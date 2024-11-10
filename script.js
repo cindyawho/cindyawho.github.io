@@ -45,7 +45,7 @@ function showCards() {
     const templateCard = document.querySelector(".card");
     
     //Now accesses my data.js file which has the projects array of objects! Yay!
-    for (let i = 0; i < projects.length; i++) {
+    for (let i = 0; i < projects.length - 1; i++) {
         let title = projects[i].title;
         let summary = projects[i].summary;
         let imgURL = projects[i].imgURL;
@@ -105,3 +105,5 @@ function editCardContent(card, title, summary, imgURL, imgAlt, skills, demoURL, 
         cardCodeLink.href = codeURL;
     }
 }
+
+document.addEventListener("DOMContentLoaded", showCards);
