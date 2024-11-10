@@ -1,3 +1,4 @@
+projects = 
 [
     {
         "title" : "Give Fund Snapchat Prototype",
