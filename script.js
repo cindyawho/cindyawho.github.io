@@ -35,3 +35,30 @@ for (const div of seeFunctionDivs) {
         }
     })
 }
+
+/*******************************************/
+/*              Project Cards               */
+/*******************************************/
+function showCards() {
+    const cardContainer = document.getElementById("card-container");
+    cardContainer.innerHTML = "";
+    const templateCard = document.querySelector(".card");
+    
+    //Now accesses my data.js file which has the projects array of objects! Yay!
+    for (let i = 0; i < projects.length; i++) {
+        let title = projects[i].title;
+        let summary = projects[i].summary;
+        let imgURL = projects[i].imgURL;
+        let imgAlt = projects[i].imgAlt;
+        let skills = projects[i].skills;
+        let demoURL = projects[i].demoURL;
+        let gitHubLink = projects[i].gitHubLink;
+        let codeURL = projects[i].codeURL;
+
+        const nextCard = templateCard.cloneNode(true); // Copy the template card
+        let tempID = "projectNum" + i.toString();
+        nextCard?.setAttribute("id", tempID); //Add id with number to edit styles during filtering functions
+        editCardContent(nextCard, title, summary, imgURL, imgAlt, skills, demoURL, gitHubLink, codeURL); // Edit props
+        cardContainer.appendChild(nextCard); // Add new card to the container
+    }
+}
