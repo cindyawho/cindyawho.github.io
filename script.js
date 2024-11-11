@@ -44,7 +44,7 @@ function showCards() {
     cardContainer.innerHTML = "";
     const templateCard = document.querySelector(".card");
     
-    //Now accesses my data.js file which has the projects array of objects! Yay!
+    //Now accesses my projects.js file which has the projects array of objects! Yay!
     for (let i = 0; i < projects.length - 1; i++) {
         let title = projects[i].title;
         let summary = projects[i].summary;
@@ -107,3 +107,31 @@ function editCardContent(card, title, summary, imgURL, imgAlt, skills, demoURL, 
 }
 
 document.addEventListener("DOMContentLoaded", showCards);
+
+/*******************************************/
+/*           Work Experience Cards         */
+/*******************************************/
+function showWorkCards() {
+    const cardContainer = document.getElementById("card-container-work");
+    cardContainer.innerHTML = "";
+    const templateCard = document.querySelector(".card-work");
+    
+    //Now accesses my workExperiences.js file which has the projects array of objects! Yay!
+    for (let i = 0; i < workExperiences.length - 1; i++) {
+        let type = workExperiences[i].type;
+        let title = workExperiences[i].title;
+        let employer = workExperiences[i].employer;
+        let dates = workExperiences[i].dates;
+        let description = workExperiences[i].description;
+        let respStart = workExperiences[i].respStart;
+        let responsibilities1 = workExperiences[i].responsibilities1;
+        let responsibilities2 = workExperiences[i].responsibilities2;
+        let moreInfoLinks = workExperiences[i].moreInfoLinks;
+
+        const nextCard = templateCard.cloneNode(true); // Copy the template card
+        let tempID = "workNum" + i.toString();
+        nextCard?.setAttribute("id", tempID); //Add id with number to edit styles during filtering functions
+        editWorkCardContent(nextCard, type, title, employer, dates, description, respStart, responsibilities1, responsibilities2, moreInfoLinks); // Edit props
+        cardContainer.appendChild(nextCard); // Add new card to the container
+    }
+}
