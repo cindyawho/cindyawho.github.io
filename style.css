@@ -285,6 +285,7 @@ button:hover{
   text-align: center;
   color: var(--gray_SubText);
   line-height: 1.5rem;
+  max-width: 60ch;
 }
 
 .workContent{
@@ -325,6 +326,8 @@ button:hover{
 .workJobDescription{
   color: var(--gray_SubText);
   line-height: 1.5rem;
+  max-width: 55ch;
+  margin: 0 auto;
 }
 
 .workJobList li{
