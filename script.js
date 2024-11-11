@@ -135,3 +135,46 @@ function showWorkCards() {
         cardContainer.appendChild(nextCard); // Add new card to the container
     }
 }
+
+function editWorkCardContent(card, type, title, employer, dates, description, respStart, responsibilities1, responsibilities2, moreInfoLinks) {
+    card.style.display = "block";
+
+    const cardType = card.querySelector(".work-type");
+    cardType.textContent = type;
+
+    const cardHeader = card.querySelector("h3");
+    cardHeader.textContent = title;
+
+    const cardAuthor = card.querySelector(".projectSummary");
+    cardAuthor.textContent = summary;
+
+    const empElem = card.querySelector(".work-emp");
+    empElem.textContent = employer;
+
+    const datesElem = card.querySelector(".work-dates");
+    datesElem.textContent = dates;
+
+    const descElem = card.querySelector(".work-desc");
+    descElem.textContent = description;
+
+    const respElem = card.querySelector(".work-respStart");
+    respElem.textContent = respStart;
+
+    const ulElem = card.querySelector(".workJobList");
+    for(let i = 0; i < responsibilities1.length; i++){
+        const listElement = document.createElement("LI");
+        const liText = document.createTextNode(responsibilities1[i]);
+        listElement.appendChild(liText);
+        ulElem.appendChild(listElement);
+    }
+    
+    const linksElem = card.querySelector(".work-links");
+    for(let i = 0; i < moreInfoLinks.length; i++){
+        const linkElem = document.createElement("a");
+        const liText = document.createTextNode(moreInfoLinks[i].text);
+        linkElem.appendChild(liText);
+        linkElem.href = moreInfoLinks[i].url;
+        linksElem.appendChild(listElement);
+    }
+
+}
