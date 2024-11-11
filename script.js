@@ -79,7 +79,7 @@ function editCardContent(card, title, summary, imgURL, imgAlt, skills, demoURL, 
     cardLink.href = demoURL;
 
     const cardSkills = card.querySelector(".projectSkills");
-    let skillsText = "";
+    let skillsText = "Tech Stack: ";
     for(let i = 0; i < skills.length; i++){
         if(skills.length == 1){
             skillsText = skillsText + skills[i];
