@@ -106,6 +106,46 @@ workExperiences =
             ]
     },
     {
+        "type": "education",
+        "title" : "Resident Assistant",
+        "employer" : "USC Summer Programs",
+        "dates" : "Summer 2018, Summer 2019",
+        "description":"",
+        "respStart":"",
+        "responsibilities1":
+            [
+                "As a resident assistant for the USC Summer Programs, I led nightly meetings and check-ins for high school students varying in age, assisted in multiple events and activities per week, chaperoned weekend field trips, and enforced program rules."
+            ],
+        "responsibilities2":[""],
+        "moreInfoLinks" : 
+            [
+                {
+                    "text" : "USC Summer Programs",
+                    "url" : "https://precollege.usc.edu/summer-programs/residential-commuter-experience/"
+                }
+            ]
+    },
+    {
+        "type": "education",
+        "title" : "Resident Assistant",
+        "employer" : "USC Residental Education",
+        "dates" : "Aug 2016 - May 2017",
+        "description":"",
+        "respStart":"",
+        "responsibilities1":
+            [
+                "As a resident assistant for the Latino Floor, I was responsible for advising 32 undergraduates on personal and academic issues, developing and hosting cultural programs throughout the year, leading an executive board, and enforcing university policy."
+            ],
+        "responsibilities2":[""],
+        "moreInfoLinks" : 
+            [
+                {
+                    "text" : "Now known as the Latinx Floor",
+                    "url" : "https://lacasa.usc.edu/programs-and-events/latinx-floor-special-interest-community/"
+                }
+            ]
+    },
+    {
         "type": "ABCDEF",
         "title" : "ABCDEF",
         "employer" : "ABCDEF",
