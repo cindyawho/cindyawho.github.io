@@ -1,6 +1,16 @@
 projects = 
 [
     {
+        "title" : "The Educator Lounge",
+        "summary": "A website prototype created for Hack This Fall: Innovate For Good.",
+        "imgURL" : "./assets/portfolioProjects/educatorLounge.png",
+        "imgAlt" : "screenshot of a nonprofit campaign page",
+        "skills" : ["React Native", "APIs (Supabase)", "Git"],
+        "demoURL" : "https://cindyawho-react-app--80.prod1a.defang.dev/",
+        "gitHubLink" : "https://github.com/cindyawho/mlh-htf2024-project",
+        "codeURL" : "https://youtu.be/n3Xxdf28Pew"
+    },
+    {
         "title" : "Give Fund Snapchat Prototype",
         "summary": "A feature prototype created for Snapchat at Snap Engineering Academy.",
         "imgURL" : "./assets/portfolioProjects/giveFundScreen.png",
