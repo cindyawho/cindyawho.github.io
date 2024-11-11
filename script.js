@@ -106,8 +106,6 @@ function editCardContent(card, title, summary, imgURL, imgAlt, skills, demoURL, 
     }
 }
 
-document.addEventListener("DOMContentLoaded", showCards);
-
 /*******************************************/
 /*           Work Experience Cards         */
 /*******************************************/
@@ -178,3 +176,12 @@ function editWorkCardContent(card, type, title, employer, dates, description, re
     }
 
 }
+
+// ---------ONLOADING FUNCTIONS----------
+
+function onloadFunctions(){
+    showCards();
+    showWorkCards();
+}
+
+document.addEventListener("DOMContentLoaded", onloadFunctions);
