@@ -136,6 +136,7 @@ button:hover{
   margin-inline: -7px;
   padding-block: 0;
   background-color: var(--white);
+  border-radius: 0 0 20px 20px;
   font-family: "Inter", sans-serif;
   height: auto;
   padding: 5px;
@@ -290,6 +291,12 @@ button:hover{
   width: 100%;
   padding: 10px;
 }
+.workContent:first-of-type{
+  border-radius: 20px 20px 0 0;
+}
+.workContent:last-of-type{
+  border-radius: 0 0 20px 20px;
+}
 
 .workJobHeadline{
   display: grid;
@@ -304,6 +311,7 @@ button:hover{
 
 .workJobDates p{
   background-color: var(--darkGold_Button);
+  border-radius: 5px;
   display: inline-block;
   right: 0;
   left: auto;
@@ -398,7 +406,7 @@ button:hover{
   display: grid;
   justify-content: center;
   text-align: center;
-  border-bottom: 3px dotted var(--white);
+  border-bottom: 3px dotted var(--black_MainText);
 }
 
 .projectImage{
@@ -412,6 +420,7 @@ button:hover{
 
 .projectSkills{
   background-color: var(--darkGold_Button);
+  border-radius: 10px;
   display: block;
   width: fit-content;
   padding: 5px;
@@ -439,11 +448,14 @@ button:hover{
     gap: 20px;
   }
   .projectItem{
-    border-bottom: none;
+    border: 1px solid rgb(200, 200, 200);
+    border-radius: 25px;
+    padding: 20px;
   }
   .projectImage{
     width: 100%;
     height: auto;
+    border-radius: 10px;
   }
   .projectLinks a{
     margin-left: 5px;
@@ -464,6 +476,7 @@ button:hover{
 
 .contactFormWrapper{
   background-color: var(--white);
+  border-radius: 20px;
   padding: 25px;
 }
 
@@ -483,6 +496,7 @@ button:hover{
   border: none;
   font-size: var(--fs-16);
   padding: 10px;
+  border-radius: 5px;
 }
 
 .contactControl textarea{
