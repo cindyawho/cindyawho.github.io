@@ -101,8 +101,7 @@ button:hover{
 /************MEDIA QUERY**************/
 @media (min-width: 600px) {
   .navBarWrapper {
-    right: 0;
-    left: auto;
+    left: 0;
     /* width: 10vw; */
     width: 70px;
     height: 100%;
@@ -216,9 +215,9 @@ button:hover{
     position: absolute;
     top: 0;
     bottom: 0;
-    left: 230px;
+    left: 400px;
     width: auto;
-    margin-right: 110px;
+    margin-right: 120px;
   }
   
   .heroWrapper {
@@ -556,6 +555,9 @@ button:hover{
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 1fr, 1fr, auto;
 }
+.infoBarHide{
+  display: none;
+}
 
 /* Info Bar Header */
 
@@ -651,15 +653,30 @@ button:hover{
   .infoBarWrapper {
     position: fixed;
     top: 0;
-    left: 0;
+    left: 70px;
     width: 200px;
     height: 100%;
     margin-top: 0;
+    padding-right: 22px;
     display: inline-grid;
     grid-template-columns: none;
     grid-template-rows: repeat(5, 1fr);
     justify-items: center;
     align-items: center;
+    box-shadow: 5px 5px 5px #cacaca;
+    transition: 2s ease-in-out;
+  }
+
+  .infoBarHide{
+    display: block;
+    position: absolute;
+    font-size: 30px;
+    top: 0;
+    right: 10px;
+  }
+  .infoBarHide:hover{
+    cursor: pointer;
+    text-shadow: 1px 1px var(--darkGold_Button);
   }
 
   .infoBarHeader{

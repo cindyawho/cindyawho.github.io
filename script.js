@@ -19,6 +19,24 @@ function hireButton(){
     window.open("#contact", '_self');
 }
 
+function hideInfoBar(e){
+    if (e.innerText === "↤") {
+        e.innerText = "↦";
+        console.log("HIDE");
+        const infoBarElem = document.querySelector(".infoBarWrapper");
+        infoBarElem.style.left = "-118px";
+        // spanElem.style.display = "block";
+    } else if (e.innerText === "↦") {
+        e.innerText = "↤";
+        console.log("SHOW");
+        const infoBarElem = document.querySelector(".infoBarWrapper");
+        infoBarElem.style.left = "70px";
+        // spanElem.style.display = "none";
+    } else {
+        e.innerText = "Congrats! You broke the code :)";
+    }
+}
+
 /*******************************************/
 /*              Project Cards               */
 /*******************************************/
