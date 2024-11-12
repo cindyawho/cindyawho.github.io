@@ -218,6 +218,7 @@ button:hover{
     left: 400px;
     width: auto;
     margin-right: 120px;
+    transition: 2s ease-in-out;
   }
   
   .heroWrapper {
