@@ -19,23 +19,6 @@ function hireButton(){
     window.open("#contact", '_self');
 }
 
-let seeFunctionDivs = document.querySelectorAll('.seeFunction');
-console.log(seeFunctionDivs);
-for (const div of seeFunctionDivs) {
-    console.log(div);
-    div.addEventListener('click', () => {
-        if(div.innerText=="See More..."){
-            div.innerText = "See Less...";
-            div.previousElementSibling.style.display = "block";
-        } else if(div.innerText=="See Less..."){
-            div.innerText = "See More...";
-            div.previousElementSibling.style.display = "none";
-        } else {
-            div.innerText= "Congrats! You broke the code :) "
-        }
-    })
-}
-
 /*******************************************/
 /*              Project Cards               */
 /*******************************************/
@@ -135,16 +118,13 @@ function showWorkCards() {
 }
 
 function editWorkCardContent(card, type, title, employer, dates, description, respStart, responsibilities1, responsibilities2, moreInfoLinks) {
-    card.style.display = "block";
+    card.style.display = "grid";
 
     const cardType = card.querySelector(".work-type");
     cardType.textContent = type;
 
     const cardHeader = card.querySelector("h3");
     cardHeader.textContent = title;
-
-    const cardAuthor = card.querySelector(".projectSummary");
-    cardAuthor.textContent = summary;
 
     const empElem = card.querySelector(".work-emp");
     empElem.textContent = employer;
@@ -165,6 +145,38 @@ function editWorkCardContent(card, type, title, employer, dates, description, re
         listElement.appendChild(liText);
         ulElem.appendChild(listElement);
     }
+
+    if(responsibilities2.length > 0){
+        const spanElem = document.createElement("span");
+        spanElem.classList.add("seeMoreLess");
+
+        ulElem.appendChild(spanElem);
+
+        const ulElem2 = card.querySelector(".seeMoreLess");
+        for(let i = 0; i < responsibilities2.length; i++){
+            const listElement = document.createElement("LI");
+            const liText = document.createTextNode(responsibilities2[i]);
+            listElement.appendChild(liText);
+            ulElem2.appendChild(listElement);
+        }
+
+        const divElem = document.createElement("div");
+        divElem.classList.add("seeFunction");
+        divElem.textContent = "See More...";
+        ulElem.appendChild(divElem);
+
+        divElem.addEventListener('click', () => {
+            if (divElem.innerText === "See More...") {
+                divElem.innerText = "See Less...";
+                spanElem.style.display = "block";
+            } else if (divElem.innerText === "See Less...") {
+                divElem.innerText = "See More...";
+                spanElem.style.display = "none";
+            } else {
+                divElem.innerText = "Congrats! You broke the code :)";
+            }
+        });
+    }
     
     const linksElem = card.querySelector(".work-links");
     for(let i = 0; i < moreInfoLinks.length; i++){
@@ -172,7 +184,9 @@ function editWorkCardContent(card, type, title, employer, dates, description, re
         const liText = document.createTextNode(moreInfoLinks[i].text);
         linkElem.appendChild(liText);
         linkElem.href = moreInfoLinks[i].url;
-        linksElem.appendChild(listElement);
+        linksElem.appendChild(linkElem);
+        const br = document.createElement('br');
+        linksElem.appendChild(br);
     }
 
 }

@@ -9,7 +9,8 @@ workExperiences =
         "moreInfoLinks" : [{}],
         "respStart":"As an engineering scholar, I...",
         "responsibilities1":["Accepted into a 15 person engineering academy with a 6% acceptance rate.", "Pitched a final showcase project to 8 Snap executives and over 250 audience members. Engineered the prototype mobile app while working on a cross-functional team with engineers, designers and marketing.", "See the Give Fund Project in my portfolio.", "Developed 5 projects with React and React Native, including an interactive game, chat system, and chatbot library."],
-        "responsibilities2":["Participated in weekly professional development to support my personal and professional growth.","Formed a tight-knit community with Snap Engineering scholars and instructors where we supported and uplifted one another."] //see more span function
+        "responsibilities2":["Participated in weekly professional development to support my personal and professional growth.","Formed a tight-knit community with Snap Engineering scholars and instructors where we supported and uplifted one another."], //see more span function
+        "moreInfoLinks" : []
     },
     {
         "type": "technical other",
@@ -17,6 +18,14 @@ workExperiences =
         "employer" : "HomeTeam GameDev",
         "dates" : "June 2024",
         "description":"Learning game development programming through team projects led by other members.",
+        "respStart":"",
+        "responsibilities1":
+            [
+                "Exploring HTML5 Canvas with JavaScript, and game art.",
+                "See my progress in my HomeTeam Character Sheet below.",
+                "For more information about the organization, visit the HomeTeam GameDev Website below."
+            ],
+        "responsibilities2":[], //see more span function
         "moreInfoLinks" : 
             [
                 {
@@ -27,15 +36,7 @@ workExperiences =
                     "text" : "HomeTeam GameDev Website",
                     "url": "https://hometeamgamedev.com/apply.html"
                 }
-            ],
-        "respStart":"",
-        "responsibilities1":
-            [
-                "Exploring HTML5 Canvas with JavaScript, and game art.",
-                "See my progress in my HomeTeam Character Sheet below.",
-                "For more information about the organization, visit the HomeTeam GameDev Website below."
-            ],
-        "responsibilities2":[] //see more span function
+            ]
     },
     {
         "type": "education",
@@ -57,7 +58,8 @@ workExperiences =
                 "Participated in the IB Authorization Team to provide support, discuss ideas, mentor teachers, plan IB-focused unit plans, and mentor 10th grade students with their IB personal projects.",
                 "Hosted weekly tutoring to help students make up missing assignments, study for assessments, and do assessment retakes.",
                 "Fundraised over $1000 for four different academic projects via DonorsChoose."
-            ] //see more span function
+            ], //see more span function
+            "moreInfoLinks" : []
     },
     {
         "type": "education",
@@ -116,7 +118,7 @@ workExperiences =
             [
                 "As a resident assistant for the USC Summer Programs, I led nightly meetings and check-ins for high school students varying in age, assisted in multiple events and activities per week, chaperoned weekend field trips, and enforced program rules."
             ],
-        "responsibilities2":[""],
+        "responsibilities2":[],
         "moreInfoLinks" : 
             [
                 {
@@ -136,7 +138,7 @@ workExperiences =
             [
                 "As a resident assistant for the Latino Floor, I was responsible for advising 32 undergraduates on personal and academic issues, developing and hosting cultural programs throughout the year, leading an executive board, and enforcing university policy."
             ],
-        "responsibilities2":[""],
+        "responsibilities2":[],
         "moreInfoLinks" : 
             [
                 {
