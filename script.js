@@ -121,7 +121,10 @@ function editWorkCardContent(card, type, title, employer, dates, description, re
     card.style.display = "grid";
 
     const cardType = card.querySelector(".work-type");
-    cardType.textContent = type;
+    const outerDiv = cardType.parentElement.parentElement;for(let i = 0; i < type.length; i++){
+        cardType.textContent = type[i];
+        outerDiv.classList.add(type[i]);
+    }
 
     const cardHeader = card.querySelector("h3");
     cardHeader.textContent = title;
@@ -189,6 +192,25 @@ function editWorkCardContent(card, type, title, employer, dates, description, re
         linksElem.appendChild(br);
     }
 
+}
+
+function filterWork(e){
+    const buttonText = e.innerHTML.toLowerCase(); 
+    console.log(buttonText); 
+    
+    const workCardContainer = document.getElementById("card-container-work");
+    let children = workCardContainer.children;
+    for (let i = 0; i < children.length; i++) {
+        currChild = children[i];
+        console.log(currChild);
+        if(buttonText == "all"){
+            currChild.style.display = "grid";
+        } else if(currChild.classList.contains(buttonText)){
+            currChild.style.display = "grid";
+        } else{
+            currChild.style.display = "none";
+        }
+    }
 }
 
 // ---------ONLOADING FUNCTIONS----------

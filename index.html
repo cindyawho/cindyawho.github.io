@@ -345,8 +345,10 @@
         <p class="sectionDescription">In the past four years, I have also taught middle school and high school math, ranging from 6th grade to AP Calculus. My experience extends beyond teaching, encompassing roles in customer service, event planning, and project management.</p>
         <div class="filterBar">
           <p>Filter By: </p>
-          <button>Programming</button>
-          <button>Education</button>
+          <button onclick="filterWork(this)">All</button>
+          <button onclick="filterWork(this)">Programming</button>
+          <button onclick="filterWork(this)">Education</button>
+          <button onclick="filterWork(this)">Other</button>
         </div>
         <!-- WORK EXPERIENCES CARD CONTAINER -->
         <div id="card-container-work" class="workWrapper">
@@ -470,7 +472,7 @@
 
   <script type="text/javascript" src="./data/projects.js"></script>
   <script type="text/javascript" src="./data/workExperiences.js"></script>
-  <script type="text/javascript" src="script.js"></script>
+  <script type="text/javascript" src="script.js" defer></script>
 
 </body>
 

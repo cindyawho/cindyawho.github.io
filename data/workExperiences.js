@@ -1,11 +1,11 @@
 workExperiences = 
 [
     {
-        "type": "technical",
+        "type": ["programming"],
         "title" : "Snap Engineering Scholar",
         "employer" : "Snap Inc.",
         "dates" : "June 2024 - Aug 2024",
-        "description" : "During the Snap Engineering Academy Program, I worked on React projects, strengthened my professional development skills, and did multiple mock technical interviews.",
+        "description" : "During the Snap Engineering Academy Program, I worked on React projects, strengthened my professional development skills, and did multiple mock programming interviews.",
         "moreInfoLinks" : [{}],
         "respStart":"As an engineering scholar, I...",
         "responsibilities1":["Accepted into a 15 person engineering academy with a 6% acceptance rate.", "Pitched a final showcase project to 8 Snap executives and over 250 audience members. Engineered the prototype mobile app while working on a cross-functional team with engineers, designers and marketing.", "See the Give Fund Project in my portfolio.", "Developed 5 projects with React and React Native, including an interactive game, chat system, and chatbot library."],
@@ -13,7 +13,7 @@ workExperiences =
         "moreInfoLinks" : []
     },
     {
-        "type": "technical other",
+        "type": ["programming", "other"],
         "title" : "HomeTeam GameDev Member",
         "employer" : "HomeTeam GameDev",
         "dates" : "June 2024",
@@ -39,7 +39,7 @@ workExperiences =
             ]
     },
     {
-        "type": "education",
+        "type": ["education"],
         "title" : "Mathematics Teacher",
         "employer" : "Los Angeles Unified School District",
         "dates" : "Aug 2019 - June 2024",
@@ -62,7 +62,7 @@ workExperiences =
             "moreInfoLinks" : []
     },
     {
-        "type": "education",
+        "type": ["education"],
         "title" : "Substitute Teacher",
         "employer" : "Los Angeles Unified School District",
         "dates" : "Jan 2020 - May 2020",
@@ -81,7 +81,7 @@ workExperiences =
         "moreInfoLinks" : []
     },
     {
-        "type": "other",
+        "type": ["other"],
         "title" : "Special Project Assistant",
         "employer" : "USC Student Life",
         "dates" : "Sept 2015 - May 2018",
@@ -108,7 +108,7 @@ workExperiences =
             ]
     },
     {
-        "type": "education",
+        "type": ["education"],
         "title" : "Resident Assistant",
         "employer" : "USC Summer Programs",
         "dates" : "Summer 2018, Summer 2019",
@@ -128,7 +128,7 @@ workExperiences =
             ]
     },
     {
-        "type": "education",
+        "type": ["education"],
         "title" : "Resident Assistant",
         "employer" : "USC Residental Education",
         "dates" : "Aug 2016 - May 2017",
@@ -148,7 +148,7 @@ workExperiences =
             ]
     },
     {
-        "type": "ABCDEF",
+        "type": ["ABCDEF"],
         "title" : "ABCDEF",
         "employer" : "ABCDEF",
         "dates" : "ABCDEF",
