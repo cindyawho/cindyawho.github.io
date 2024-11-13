@@ -41,7 +41,6 @@ a:hover svg circle{
 
 a.underline{
   color: var(--darkGold_Button);
-  /* text-decoration: none; */
 }
 
 button {
@@ -102,7 +101,6 @@ button:hover{
 @media (min-width: 600px) {
   .navBarWrapper {
     left: 0;
-    /* width: 10vw; */
     width: 70px;
     height: 100%;
     margin: auto;
@@ -160,14 +158,12 @@ button:hover{
 
 .heroContent {
   padding: 24px;
-  /* line-height: 123.6%; */
   position: relative;
   z-index: 3;
   width: 100%;
 }
 
 .heroContent h1{
-  /* font-size: var(--fs-24); */
   font-size: 1.375rem;
   font-size: clamp(1.375rem, 1.1607142857142856rem + 1.0714285714285714vw, 1.5625rem);
   font-weight: 700;
@@ -180,7 +176,6 @@ button:hover{
 
 .heroContent p{
   font-weight: 300;
-  /* font-size: var(--fs-14); */
   font-size: 0.875rem;
   font-size: clamp(0.875rem, 0.7321428571428572rem + 0.7142857142857143vw, 1rem);
   color: var(--gray_SubText);
@@ -307,7 +302,6 @@ button:hover{
   display: flex;
   justify-content: flex-end;
   gap: 20px;
-  /* display: none; DELETE THIS LINE ONCE I IMPLEMENT JS Data file and functions */
 }
 .filterBar button{
   text-transform: initial;
@@ -325,7 +319,6 @@ button:hover{
 }
 
 .workJobDates p{
-  /* background-color: var(--darkGold_Button); */
   border-radius: 5px;
   display: inline-block;
   right: 0;
@@ -408,7 +401,6 @@ button:hover{
 /* Will eventually be a working selector using javascript */
 .portfolioBar{
   display: none;
-  /* display: flex; */
   flex-direction: row;
   justify-content: center;
   gap: 35px;
@@ -606,7 +598,6 @@ button:hover{
 
 .infoBarGeneral{
   grid-column: 2 / 4;
-  /* display: inline-block; */
 }
 
 .infoBarGeneralInfo{
@@ -679,9 +670,6 @@ button:hover{
     flex-wrap: wrap;
     gap: 5px;
   }
-  .techStack-container img{
-    /* opacity: .75; */
-  }
 
   .infoBarHide{
     display: block;
@@ -743,7 +731,6 @@ button:hover{
   .infoBarSkills{
     border-bottom: 1px solid var(--gray_Background);
     grid-column: 1;
-    /* text-align: center; */
     padding: 15px 10px;
   }
 
