@@ -301,7 +301,8 @@ button:hover{
   box-sizing: border-box;
   border-radius: 20px 20px 0 0;
   background-color: var(--white);
-  padding: 30px 30px 5px 30px;
+  border-bottom: 1px solid var(--gray_SubText);
+  padding: 30px;
   width: 100%;
   display: flex;
   justify-content: flex-end;
@@ -324,13 +325,13 @@ button:hover{
 }
 
 .workJobDates p{
-  background-color: var(--darkGold_Button);
+  /* background-color: var(--darkGold_Button); */
   border-radius: 5px;
   display: inline-block;
   right: 0;
   left: auto;
   padding: 5px;
-  color: var(--white);
+  color: var(--gray_SubText);
   text-align: right;
   font-size: var(--fs-12);
 }
@@ -677,6 +678,9 @@ button:hover{
     display: flex;
     flex-wrap: wrap;
     gap: 5px;
+  }
+  .techStack-container img{
+    /* opacity: .75; */
   }
 
   .infoBarHide{
