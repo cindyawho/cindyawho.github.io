@@ -24,7 +24,7 @@ function hideInfoBar(e){
         e.innerText = "↦";
         console.log("HIDE");
         const infoBarElem = document.querySelector(".infoBarWrapper");
-        infoBarElem.style.left = "-118px";
+        infoBarElem.style.left = "-158px";
         const centralContentElem = document.querySelector(".centralContent");
         centralContentElem.style.left = "212px"
         // spanElem.style.display = "block";
@@ -40,7 +40,34 @@ function hideInfoBar(e){
         e.innerText = "Congrats! You broke the code :)";
     }
 }
+/*******************************************/
+/*            Tech Stack Icons             */
+/*******************************************/
+function showIcons() {
+    const cardTechContainer = document.getElementById("techStack-container");
+    cardTechContainer.textContent = "";
+    const templateIcon = document.querySelector(".techStackIcon");
+    
+    //Now accesses my projects.js file which has the projects array of objects! Yay!
+    for (let i = 0; i < techStackIcons.length; i++) {
+        let type = techStackIcons[i].type;
+        let alt = techStackIcons[i].name;
+        let href = techStackIcons[i].url;
 
+        const nextCard = templateIcon.cloneNode(true); // Copy the template card
+        let tempID = "iconNum" + i.toString();
+        nextCard?.setAttribute("id", tempID); //Add id with number to edit styles during filtering functions
+        editIcon(nextCard, type, alt, href); // Edit props
+        cardTechContainer.appendChild(nextCard); // Add new card to the container
+    }
+}
+
+function editIcon(card, name, alt, href) {
+    card.style.display = "block";
+
+    card.alt = alt;
+    card.src = href;
+}
 /*******************************************/
 /*              Project Cards               */
 /*******************************************/
@@ -243,6 +270,7 @@ function filterWork(e){
 function onloadFunctions(){
     showCards();
     showWorkCards();
+    showIcons();
 }
 
 document.addEventListener("DOMContentLoaded", onloadFunctions);

@@ -215,7 +215,7 @@ button:hover{
     position: absolute;
     top: 0;
     bottom: 0;
-    left: 400px;
+    left: 440px;
     width: auto;
     margin-right: 120px;
     transition: 2s ease-in-out;
@@ -494,7 +494,8 @@ button:hover{
   }
   .projectImage{
     width: 100%;
-    height: auto;
+    height: 18vw;
+    object-fit: cover;
     border-radius: 10px;
   }
   .projectLinks{
@@ -568,7 +569,9 @@ button:hover{
 .infoBarHide{
   display: none;
 }
-
+.techStack-container{
+  display: none;
+}
 /* Info Bar Header */
 
 .infoBarHeader{
@@ -658,7 +661,7 @@ button:hover{
     position: fixed;
     top: 0;
     left: 70px;
-    width: 200px;
+    width: 240px; /*USED TO BE 200px*/
     height: 100%;
     margin-top: 0;
     padding-right: 22px;
@@ -669,6 +672,11 @@ button:hover{
     align-items: center;
     box-shadow: 5px 5px 5px #cacaca;
     transition: 2s ease-in-out;
+  }
+  .techStack-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
   }
 
   .infoBarHide{
