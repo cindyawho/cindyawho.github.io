@@ -71,6 +71,9 @@ function showCards() {
 function editCardContent(card, title, summary, imgURL, imgAlt, skills, demoURL, gitHubLink, codeURL) {
     card.style.display = "block";
 
+    const divElemOverlay = card.querySelector(".projectItemOverlay");
+    divElemOverlay.textContent = summary;
+
     const cardHeader = card.querySelector("h3");
     cardHeader.textContent = title;
 
