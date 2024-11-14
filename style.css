@@ -465,10 +465,17 @@ button:hover{
     gap: 20px;
   }
   .projectItem{
+    /* background-color: whitesmoke; */
     border: 1px solid rgb(200, 200, 200);
     border-radius: 25px;
     padding: 20px;
-    transition: var(--transition);
+    transition: .5s ease-in-out;
+    transform-style: preserve-3d;
+  }
+  .projectItem:hover{
+    border: 1px solid #FFB400;
+    background-color: white;
+    transform: scale(1.05);
   }
   /* NEED TO FIX THIS OVERLAY FOR SUMMARY TO SHOW */
   .projectItemOverlay{
