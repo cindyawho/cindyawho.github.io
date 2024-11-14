@@ -161,7 +161,7 @@ button:hover{
 }
 
 .heroContent {
-  padding: 24px;
+  padding: 24px 40px;
   position: relative;
   z-index: 3;
   width: 100%;
@@ -192,13 +192,13 @@ button:hover{
   width: clamp(8.9375rem, 2.008928571428571rem + 34.64285714285714vw, 15rem);
   height: auto;
   bottom: 0;
-  right: 0;
+  right: 2vw;
   z-index: 3;
 }
 
 .heroButton{
   padding: 0;
-  margin-inline-start: 24px;
+  margin-inline-start: 40px;
   margin-bottom: 16px;
   z-index: 10;
 }
@@ -444,6 +444,9 @@ button:hover{
 
 .projectTitle{
   margin-bottom: 10px;
+}
+.projectSummary{
+  display: none;
 }
 
 .projectSkills{
