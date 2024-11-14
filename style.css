@@ -445,9 +445,6 @@ button:hover{
 .projectTitle{
   margin-bottom: 10px;
 }
-.projectSummary{
-  display: none;
-}
 
 .projectSkills{
   color: var(--black_MainText);
