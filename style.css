@@ -176,6 +176,7 @@ button:hover{
 
 .heroContent_Span {
   color: var(--darkGold_Button);
+  text-shadow: 2px 2px var(--black_MainText);
 }
 
 .heroContent p{
@@ -466,7 +467,7 @@ button:hover{
 
 .projectLinks a{
   background-color: var(--darkGold_Button);
-  color: var(--white);
+  color: var(--black_MainText);
   border-radius: 5px;
   padding: 5px;
   transition: .5s ease-in-out;
@@ -485,7 +486,7 @@ button:hover{
   }
   .projectItem{
     border: 1px solid rgb(200, 200, 200);
-    border-radius: 25px;
+    border-radius: 10px;
     padding: 20px;
     transition: .5s ease-in-out;
     transform-style: preserve-3d;
