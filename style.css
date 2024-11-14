@@ -20,6 +20,10 @@
   --transition: 550ms ease-in-out;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 html {
   height: 100%;
   width: 100%;
@@ -293,15 +297,17 @@ button:hover{
 }
 
 .filterBar{
-  box-sizing: border-box;
   border-radius: 20px 20px 0 0;
   background-color: var(--white);
   border-bottom: 1px solid var(--gray_SubText);
-  padding: 30px;
+  padding: 15px;
   width: 100%;
   display: flex;
   justify-content: flex-end;
   gap: 20px;
+}
+.filterBar *{
+  font-size: 12px;
 }
 .filterBar button{
   text-transform: initial;
@@ -315,7 +321,6 @@ button:hover{
 
 .workJobDates{
   text-align: right;
-  margin-inline-end: 10px;
 }
 
 .workJobDates p{
@@ -364,6 +369,12 @@ button:hover{
     padding: 35px;
     width: auto;
   }
+  .filterBar{
+    padding: 30px;
+  }
+  .filterBar *{
+    font-size: 16px;
+  }
   .sectionTitle{
     font-size: clamp(1.625rem, 1.4485294117647058rem + 0.8823529411764706vw, 2rem);
   }
@@ -373,10 +384,18 @@ button:hover{
     margin-right: auto;
     width: 90%;
   }
+  .workJobTitle h3{
+    margin: 0;
+    font-size: 1.25em;
+  }
+  .workJobDates p{
+    font-size: var(--fs-16);
+  }
   .workJobHeadline{
     display: block;
     text-align: right;
-    grid-column: 1 / span 1;
+    grid-column: 1 / span 2;
+    padding-right: 30px;
     font-size: var(--fs-20);
   }
   .workJobDescription{
@@ -563,7 +582,7 @@ button:hover{
   top:0;
   left: 0px;
   border-radius: 20px;
-  padding: 0 15px;
+  padding: 0 20px;
   margin-top: 35px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -667,7 +686,7 @@ button:hover{
   .infoBarWrapper {
     position: fixed;
     top: 0;
-    left: 70px;
+    left: 60px;
     width: 240px; /*USED TO BE 200px*/
     height: 100%;
     margin-top: 0;

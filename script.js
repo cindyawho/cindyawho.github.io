@@ -24,7 +24,7 @@ function hideInfoBar(e){
         e.innerText = "↦";
         console.log("HIDE");
         const infoBarElem = document.querySelector(".infoBarWrapper");
-        infoBarElem.style.left = "-158px";
+        infoBarElem.style.left = "-135px";
         const centralContentElem = document.querySelector(".centralContent");
         centralContentElem.style.left = "212px"
         // spanElem.style.display = "block";
@@ -32,7 +32,7 @@ function hideInfoBar(e){
         e.innerText = "↤";
         console.log("SHOW");
         const infoBarElem = document.querySelector(".infoBarWrapper");
-        infoBarElem.style.left = "70px";
+        infoBarElem.style.left = "60px";
         const centralContentElem = document.querySelector(".centralContent");
         centralContentElem.style.left = "400px"
         // spanElem.style.display = "none";
