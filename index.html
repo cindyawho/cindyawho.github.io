@@ -1,6 +1,6 @@
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
@@ -21,7 +21,7 @@
       <h2 class="visuallyHidden">Navigation Bar</h2>
       <div class="navBarGridIcons">
         <div class="navBarIcon" id="changeContrast" style="display: none;"> <!-- <p>CONTRAST</p> -->
-          <a href="">
+          <a href="" aria-label="Not a navigation button">
             <svg width="40px" height="40px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <g>
                     <path fill="none" d="M0 0h24v24H0z"/>
@@ -31,7 +31,7 @@
           </a>
         </div>
         <div class="navBarIcon"> <!-- <p>Home</p> -->
-          <a href="index.html">
+          <a href="index.html" aria-label="Navigate to the Homepage">
             <svg 
               width="40px" 
               height="40px" 
@@ -57,12 +57,12 @@
           </a>
         </div>
         <div class="navBarIcon" > <!-- <p>Work</p> -->
-          <a href="#portfolio">
+          <a href="#portfolio"  aria-label="Navigate to the Portfolio section">
             <svg id="svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40px" height="40px" viewBox="0 0 36 36"><g id="svgg"><path id="path0" d="" stroke="none" fill="#040404" fill-rule="evenodd"></path><path id="path1" d="" stroke="none" fill="#080404" fill-rule="evenodd"></path><path id="path2" d="" stroke="none" fill="#080404" fill-rule="evenodd"></path><path id="path3" d="" stroke="none" fill="#080404" fill-rule="evenodd"></path><path id="path4" d="" stroke="none" fill="#080404" fill-rule="evenodd"></path></g></svg>
           </a>
         </div>
         <div class="navBarIcon" > <!-- <p>Work</p> -->
-          <a href="#work">
+          <a href="#work" aria-label="Navigate to the work section">
           <svg 
             width="40px" 
             height="40px" 
@@ -90,7 +90,7 @@
           </a>
         </div>
         <div class="navBarIcon" > <!-- <p>Graduate Cap</p> -->
-          <a href="#education">
+          <a href="#education" aria-label="Navigate to the education section">
             <svg 
               width="40px" 
               height="40px" 
@@ -126,7 +126,7 @@
           </a>
         </div>
         <div class="navBarIcon"> <!-- <p>Contact</p> -->
-          <a href="#contact">
+          <a href="#contact" aria-label="Navigate to the contact section">
           <svg 
             width="40px" 
             height="40px" 
@@ -153,7 +153,7 @@
           </a>
         </div>
         <div class="navBarIcon"> <!-- <p>Message</p> -->
-          <a href="#contact">
+          <a href="#contact" aria-label="Navigate to the contact section">
           <svg 
             width="40px" 
             height="40px" 
@@ -254,13 +254,13 @@
             <h3>Cindy Andrade</h3>
             <h4>Math Teacher Who Codes</h4>
             <div class="infoBarHeaderSocial">
-              <a href="https://www.linkedin.com/in/cindy-a-4a4b2588/" class="infoBarHeaderSocialLink" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.linkedin.com/in/cindy-a-4a4b2588/" class="infoBarHeaderSocialLink" target="_blank" rel="noopener noreferrer" aria-label="Follow Cindy on LinkedIn">
                 <img src="./assets/svgIcons/socialIcons/linkedin-icon.svg" alt="linkedIn Icon" class="infoBarHeaderSocialImage">
               </a>
-              <a href="https://github.com/cindyawho" class="infoBarHeaderSocialLink" target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/cindyawho" class="infoBarHeaderSocialLink" target="_blank" rel="noopener noreferrer" aria-label="Go to Cindy\'s GitHub profile">
                 <img src="./assets/svgIcons/socialIcons/github-Icon.svg" alt="gitHub Icon" class="infoBarHeaderSocialImage">
               </a>
-              <a href="https://secure.donorschoose.org/profile/teacher-stats.html?teacher=3822677_3824725" class="infoBarHeaderSocialLink" target="_blank" rel="noopener noreferrer">
+              <a href="https://secure.donorschoose.org/profile/teacher-stats.html?teacher=3822677_3824725" class="infoBarHeaderSocialLink" target="_blank" rel="noopener noreferrer" aria-label="Go to Cindy\'s DonorsChoose profile">
                 <img src="./assets/svgIcons/socialIcons/donorsChoose-icon.svg" alt="donorsChoose Icon" class="infoBarHeaderSocialImage">
               </a>
             </div>
@@ -292,7 +292,7 @@
           </div>
         </div>  
       </section>
-      <img id="portfolio" class="centralDecor" src="./assets/svgIcons/svgDecor/decorationCircleTrio.svg" />
+      <img id="portfolio" class="centralDecor" alt="" src="./assets/svgIcons/svgDecor/decorationCircleTrio.svg" />
       <div class="portfolioWrapper" >
         <h2 class="sectionTitle">Portfolio</h2>
         <p class="sectionDescription">Here are some of my personal coding projects and some assignments from CIS courses!</p>
@@ -317,12 +317,12 @@
           <p class="projectSummary" style="display: none;"></p>
           <p class="projectSkills">Skills Used: React Native</p>
           <div class="projectLinks">
-            <a href="./projectsCode/giveFund/index.html" class="underline projectDemo" target="_blank" rel="noopener noreferrer">View Project</a>
-            <a href="https://github.com/cindyawho/2024-Snap-FosterYouth-GiveFund" class="underline projectCode" target="_blank" rel="noopener noreferrer">View Code</a>
+            <a href="./projectsCode/giveFund/index.html" class="underline projectDemo" target="_blank" rel="noopener noreferrer" aria-label="Navigate to project demo">View Project</a>
+            <a href="https://github.com/cindyawho/2024-Snap-FosterYouth-GiveFund" class="underline projectCode" target="_blank" rel="noopener noreferrer" aria-label="Navigate to project github or code">View Code</a>
           </div>
       </div>
 
-      <img id="work" class="centralDecor" src="./assets/svgIcons/svgDecor/decorationCircleTrio.svg" />
+      <img id="work" class="centralDecor" alt="" src="./assets/svgIcons/svgDecor/decorationCircleTrio.svg" />
       <div class="workWrapper" id="work">
         <h2 class="sectionTitle">Professional Experience</h2>
         <p class="sectionDescription">I spent my last summer at Snap Engineering Academy, where I honed my technical skills and gained valuable insights into the engineering field. At HomeTeam GameDev, I am contributing to collaborative game development projects, enhancing my ability to work in diverse, creative teams. </p>
@@ -367,7 +367,7 @@
           </div>
         </div>
       </div>
-      <img id="education" class="centralDecor" src="./assets/svgIcons/svgDecor/decorationCircleTrio.svg" />
+      <img id="education" class="centralDecor" alt="" src="./assets/svgIcons/svgDecor/decorationCircleTrio.svg" />
       <div class="educationWrapper" >
         <h2 class="sectionTitle">Education</h2>
         <p class="sectionDescription">I am extremeley grateful for all the knowledge and skills I have developed in my life. Below are the degrees I will receive or have received from my studies.</p>
@@ -384,7 +384,7 @@
             <h3>Associate's Degree</h3>
             <h3>Computer Information Systems: Full Stack Development</h3>
             <p><em>"This Full Stack Web Development curriculum prepares students with necessary skills to seek entry-level employment in client-side and server-side web development. Instruction includes development, testing, deployment, and maintenance of secure web applications using programming languages including and not limited to HTML, CSS, JavaScript, React, and Python."</em></p>
-            <a href="https://pasadena.edu/academics/degrees-and-certificates/certificates-of-achievement/web-development-applications.php" class="educationLink" target="_blank">See a more detailed description of the program here.</a>
+            <a href="https://pasadena.edu/academics/degrees-and-certificates/certificates-of-achievement/web-development-applications.php" class="educationLink" target="_blank" aria-label="Read more about this degree">See a more detailed description of the program here.</a>
           </div>
         </div>
         <div class="workContent bottomBorder">
@@ -400,7 +400,7 @@
             <h3>Master of Arts</h3>
             <h3>Teaching Secondary: Mathematics</h3>
             <p><em>"The MAT program meets credential program standards and teacher performance expectations set by the California Commission on Teacher Credentialing (CTC)."</em></p>
-            <a href="https://rossier.usc.edu/programs/find-compare-programs/master-arts-teaching" class="educationLink" target="_blank">See a more detailed description of the program here.</a>
+            <a href="https://rossier.usc.edu/programs/find-compare-programs/master-arts-teaching" class="educationLink" target="_blank" aria-label="Read more about this degree here">See a more detailed description of the program here.</a>
           </div>
         </div>
         <div class="workContent bottomBorder">
@@ -416,12 +416,12 @@
             <h3>Bachelor of Arts</h3>
             <h3>Applied and Computational Mathematics</h3>
             <p><em>"The USC Mathematics Department offers a variety of undergraduate degree programs. Each degree allows enough electives for students to personalize their degree and prepare for their particular interests and goals, from work in industry or government to graduate study."</em></p>
-            <a href="https://dornsife.usc.edu/mathematics/degree-requirements-undergrad/" class="educationLink" target="_blank">See a more detailed description of the program here.</a>
+            <a href="https://dornsife.usc.edu/mathematics/degree-requirements-undergrad/" class="educationLink" target="_blank" aria-label="Read more about this degree here">See a more detailed description of the program here.</a>
           </div>
         </div>
       </div>
       
-      <img id="contact" class="centralDecor" src="./assets/svgIcons/svgDecor/decorationCircleTrio.svg" />
+      <img id="contact" class="centralDecor" alt="" src="./assets/svgIcons/svgDecor/decorationCircleTrio.svg" />
       <div class="contactWrapper">
         <div class="contactText">
           <h2 class="sectionTitle">Contact Me</h2>
