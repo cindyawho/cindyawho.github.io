@@ -111,7 +111,7 @@ function editCardContent(card, title, summary, imgURL, imgAlt, skills, demoURL, 
     cardImage.src = imgURL;
     cardImage.alt = imgAlt;
     const cardLink = card.querySelector(".imgLink");
-    cardLink.href = demoURL;
+    cardLink.href = demoURL.startsWith("http") ? demoURL : "https://cindyawho.github.io/" + demoURL;
 
     const cardSkills = card.querySelector(".projectSkills");
     let skillsText = "Tech Stack: ";
