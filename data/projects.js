@@ -6,7 +6,7 @@ projects =
         "imgURL" : "./assets/portfolioProjects/educatorLounge.png",
         "imgAlt" : "screenshot of a nonprofit campaign page",
         "skills" : ["React Native", "APIs (Supabase)", "Git"],
-        "demoURL" : "cindyawho-react-app.prod1a.defang.dev",
+        "demoURL" : "https://cindyawho-react-app.prod1a.defang.dev/",
         "gitHubLink" : "https://github.com/cindyawho/mlh-htf2024-project",
         "codeURL" : "https://youtu.be/n3Xxdf28Pew"
     },
