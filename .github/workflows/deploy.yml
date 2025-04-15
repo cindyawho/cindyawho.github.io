@@ -17,11 +17,9 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Upload site files
-        uses: actions/upload-pages-artifact@v4
+        uses: actions/upload-pages-artifact@v2
         with:
-          path: .  # Uploads everything in the root directory
+          path: .  # Root of your repo (where index.html lives)
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
-        with:
-          artifact_name: github-pages
