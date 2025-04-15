@@ -12,14 +12,14 @@ permissions:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    steps: 
+    steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
       - name: Upload site files
         uses: actions/upload-pages-artifact@v2
         with:
-          path: .  # Root of your repo (where index.html lives)
+          path: .
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
