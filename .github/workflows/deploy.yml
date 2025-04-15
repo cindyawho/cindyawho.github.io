@@ -23,3 +23,9 @@ jobs:
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        # with:
+        #   name: my-artifact
+        #   path: path/to/artifact
