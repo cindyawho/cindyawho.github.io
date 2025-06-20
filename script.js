@@ -97,6 +97,7 @@ function showCards() {
 
 function editCardContent(card, title, summary, imgURL, imgAlt, skills, demoURL, gitHubLink, codeURL) {
     card.style.display = "block";
+    // console.log(card)
 
     const divElemOverlay = card.querySelector(".projectItemOverlay");
     divElemOverlay.textContent = summary;
@@ -138,6 +139,10 @@ function editCardContent(card, title, summary, imgURL, imgAlt, skills, demoURL, 
         cardCodeLink.href = gitHubLink;
     } else {
         cardCodeLink.href = codeURL;
+    }
+
+    if (cardLink.href == "https://cindyawho.github.io/") {
+        cardProjectLink.style.display = "none";
     }
 }
 

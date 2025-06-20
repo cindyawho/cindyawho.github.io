@@ -1,6 +1,16 @@
 projects = 
 [
     {
+        "title" : "Web Content Management System",
+        "summary": "Using Python, I created a rudimentary web content management system for a book journal site.",
+        "imgURL" : "./assets/portfolioProjects/bookJournal-WebCMS.png",
+        "imgAlt" : "screenshot of the book journal figma design",
+        "skills" : ["Python", "HTML", "CSS"],
+        "demoURL" : "",
+        "gitHubLink" : "https://github.com/cindyawho/web-CMS",
+        "codeURL" : ""
+    },
+    {
         "title" : "The Educator Lounge",
         "summary": "A website prototype created for Hack This Fall: Innovate For Good.",
         "imgURL" : "./assets/portfolioProjects/educatorLounge.png",
