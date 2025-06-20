@@ -25,7 +25,7 @@ projects =
         "summary": "A feature prototype created for Snapchat at Snap Engineering Academy.",
         "imgURL" : "./assets/portfolioProjects/giveFundScreen.png",
         "imgAlt" : "screenshot of a nonprofit campaign page",
-        "skills" : ["React Native", "APIs (Supabase)", "Git"],
+        "skills" : ["React", "APIs (Supabase)", "Git"],
         "demoURL" : "./projectsCode/giveFund/index.html",
         "gitHubLink" : "https://github.com/cindyawho/2024-Snap-FosterYouth-GiveFund",
         "codeURL" : "./projectsCode/giveFund/index.html"

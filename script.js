@@ -146,6 +146,27 @@ function editCardContent(card, title, summary, imgURL, imgAlt, skills, demoURL, 
     }
 }
 
+function filterProject(e){
+    const buttonText = e.innerHTML.toLowerCase(); 
+    // console.log(buttonText); 
+
+    const projectCardContainer = document.getElementById("card-container");
+    let children = projectCardContainer.children;
+    for (let i = 0; i < children.length; i++) {
+        currChild = children[i];
+        // console.log(currChild.querySelector(".projectSkills").innerText);
+        const skills = currChild.querySelector(".projectSkills").innerText.toLowerCase();
+        // console.log(skills);
+        if(buttonText == "all"){
+            currChild.style.display = "grid";
+        } else if(skills.includes(buttonText)){
+            currChild.style.display = "grid";
+        } else{
+            currChild.style.display = "none";
+        }
+    }
+}
+
 /*******************************************/
 /*           Work Experience Cards         */
 /*******************************************/
@@ -259,7 +280,7 @@ function filterWork(e){
     let children = workCardContainer.children;
     for (let i = 0; i < children.length; i++) {
         currChild = children[i];
-        console.log(currChild);
+        // console.log(currChild);
         if(buttonText == "all"){
             currChild.style.display = "grid";
         } else if(currChild.classList.contains(buttonText)){
