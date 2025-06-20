@@ -1,6 +1,18 @@
 workExperiences = 
 [
     {
+        "type": ["programming", "education"],
+        "title" : "Snap Engineering Academy Coach",
+        "employer" : "Snap Inc.",
+        "dates" : "May 2025 - Aug 2025",
+        "description" : "The Snap Engineering Academy helps scholars develop technical skills, build innovative projects, and connect with mentors across Snap's engineering teams.",
+        "moreInfoLinks" : [{}],
+        "respStart":"As an engineering coach, I will have...",
+        "responsibilities1":["Mentored a diverse group of 15 scholars in full-stack web development (React/Supabase) and mobile development (React Native) to enable them to create new Snapchat feature prototypes.", "Led 6 weekly meetings in preparation for the Academy launch and assisted in curriculum development to improve its organization and clarity." ],
+        "responsibilities2":["Assigned 3 projects and 20+ assignments for scholars to complete within a 9-week scope and ensured tasks were feasible yet beneficial by considering factors such as time, difficulty, and skill levels", "Managed the Google classroom/calendar and documented suggestions to the curriculum on a daily basis for improvement to future years of the program."], //see more span function
+        "moreInfoLinks" : []
+    },
+    {
         "type": ["programming"],
         "title" : "Snap Engineering Scholar",
         "employer" : "Snap Inc.",
