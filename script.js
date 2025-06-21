@@ -22,7 +22,7 @@ function hireButton(){
 function hideInfoBar(e){
     if (e.innerText === "↤") {
         e.innerText = "↦";
-        console.log("HIDE");
+        // console.log("HIDE");
         const infoBarElem = document.querySelector(".infoBarWrapper");
         infoBarElem.style.left = "-135px";
         const centralContentElem = document.querySelector(".centralContent");
@@ -30,7 +30,7 @@ function hideInfoBar(e){
         // spanElem.style.display = "block";
     } else if (e.innerText === "↦") {
         e.innerText = "↤";
-        console.log("SHOW");
+        // console.log("SHOW");
         const infoBarElem = document.querySelector(".infoBarWrapper");
         infoBarElem.style.left = "60px";
         const centralContentElem = document.querySelector(".centralContent");

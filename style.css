@@ -218,7 +218,7 @@ button:hover{
     left: 440px;
     width: auto;
     margin-right: 120px;
-    transition: 2s ease-in-out;
+    transition: 1s ease-in-out;
   }
   
   .heroWrapper {
@@ -698,7 +698,7 @@ button:hover{
     justify-items: center;
     align-items: center;
     box-shadow: 5px 5px 5px #cacaca;
-    transition: 2s ease-in-out;
+    transition: 1s ease-in-out;
   }
   .techStack-container{
     display: flex;
