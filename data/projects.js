@@ -11,6 +11,16 @@ projects =
         "codeURL" : ""
     },
     {
+        "title" : "Python GUI",
+        "summary": "Using the Tkinter library, I created small GUI projects including a live weather app.",
+        "imgURL" : "./assets/portfolioProjects/tkinterKiosk.png",
+        "imgAlt" : "screenshot of the my tkinter GUI for my ordering Kiosk",
+        "skills" : ["Python", "APIs"],
+        "demoURL" : "",
+        "gitHubLink" : "https://github.com/cindyawho/tkinterProject1",
+        "codeURL" : ""
+    },
+    {
         "title" : "The Educator Lounge",
         "summary": "A website prototype created for Hack This Fall: Innovate For Good.",
         "imgURL" : "./assets/portfolioProjects/educatorLounge.png",
