@@ -1,6 +1,33 @@
 workExperiences = 
 [
     {
+        "type": ["education", "programming"],
+        "title" : "Math Teacher | Coding Club Mentor",
+        "employer" : "Bright Star Schools",
+        "dates" : "Jan 2026 - Present",
+        "description" : "I teach Geometry to high school students at a public charter school in Los Angeles and mentor students in coding club to introduce programming concepts and support their growth in coding.",
+        "moreInfoLinks" : [{}],
+        "respStart":"As a Math Teacher and Coding Club Mentor, I...",
+        "responsibilities1":["Mentored a group of 12 students in web development and game design (Roblox Studio).", "Created engaging geometry lesson plans into the Illustrative Mathematics curriculum." ],
+        "responsibilities2":["Taught life skills lessons and social emotional learning to students in Advisory.", "Provided individualized support to students with varying learning needs."], //see more span function
+        "moreInfoLinks" : []
+    },
+    {
+        "type": ["programming"],
+        "title" : "Game Scripter",
+        "employer" : "Small Loan Studio",
+        "dates" : "Sep 2025 - Present",
+        "description" : "",
+        "moreInfoLinks" : [{}],
+        "respStart":"As a programmer, I...",
+        "responsibilities1":["Write Lua code to help develop Red Rain, a single-player, 3rd-person RPG.", "Script cutscenes, animations, and title cards on Solarus Editor.", "Collaborate with a team of 20+ artists, designers, and programmers to create an immersive gaming experience." ],
+        "responsibilities2":[], //see more span function
+        "moreInfoLinks" : [{
+                    "text" : "Check out the Red Rain Steam page",
+                    "url" : "https://store.steampowered.com/app/4087210/Red_Rain"
+                }]
+    },
+    {
         "type": ["programming", "education"],
         "title" : "Snap Engineering Academy Coach",
         "employer" : "Snap Inc.",
